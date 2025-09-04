@@ -1,0 +1,15 @@
+# Introduced /key endpoint
+
+We've introduced a new endpoint [/key](/reference/api-usage) for conveniently monitoring your account's API usage, including rate limits and remaining credits.
+
+**Example of responses**:
+
+```json
+{
+  "plan": "Other",
+  "rate_limit_request_per_minute": 1000,
+  "monthly_call_credit": 1000000,
+  "current_total_monthly_calls": 307,
+  "current_remaining_monthly_calls": 999693
+}
+```

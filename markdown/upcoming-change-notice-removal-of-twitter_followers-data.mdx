@@ -1,0 +1,36 @@
+# Upcoming Change Notice: Removal of twitter_followers Data
+
+**Notice: Upcoming Change to CoinGecko API Endpoints - Removal of`twitter_followers` Data**
+
+**Effective Date: 15 May 2025**
+
+**Affected Endpoints:**
+
+* [Coin Data by ID](https://docs.coingecko.com/reference/coins-id)
+* [Coin Data by Token Address](https://docs.coingecko.com/reference/coins-contract-address)
+* [Coin Historical Data by ID](https://docs.coingecko.com/reference/coins-id-history)
+
+**Details of the Change:**
+
+Please be advised that the `twitter_followers` data point within the `community_data` object will be removed from the above-listed API endpoints, effective 15 May 2025. This change is being implemented due to significant recent changes to the X (formerly Twitter) API, which have fundamentally altered how this specific data can be accessed.
+
+Example of Affected Data Structure:
+
+```json
+"community_data": {  
+  "twitter_followers": 7694251,
+  // ... other community data points ...
+}
+```
+
+After the effective date, the `twitter_followers` field will no longer be present in the API responses for these endpoints.
+
+**Action Required:**
+
+If your applications or integrations currently rely on the `twitter_followers` data from these CoinGecko API endpoints, please make the necessary adjustments to your code before 15 May 2025 to avoid potential errors or data discrepancies.
+
+**Important Note Regarding Previously Stored`twitter_followers` Data:**
+
+Please be aware that if you have previously stored `twitter_followers` data obtained from the CoinGecko API and archived it within your own systems, you are solely responsible for its continued use and any implications thereof.
+
+We appreciate your understanding as we adapt to changes in third-party platforms to maintain the stability and reliability of our API. If you have any questions or require further clarification, please do not hesitate to contact our support team.
