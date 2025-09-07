@@ -1,0 +1,21 @@
+# Introduced /exchanges/{id}/volume_chart
+
+We have added a new endpoint, [/exchanges/\{id}/volume\_chart](/reference/exchanges-id-volume-chart).
+
+This endpoint is designed to provide volume chart data related to the specified exchange, with the information presented in BTC.
+
+**Example of responses**:
+
+```Text JSON
+[
+  [
+    1707030000000,
+    "141206.9308600928467152" 👈 value in BTC
+  ],
+  [
+    1707030600000,
+    "141639.1493761186305005" 👈 value in BTC
+  ],
+  ......
+ ]
+```

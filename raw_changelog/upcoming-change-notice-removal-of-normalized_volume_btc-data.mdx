@@ -1,0 +1,28 @@
+# Upcoming Change Notice: Removal of normalized_volume_btc Data
+
+**Notice: Upcoming Change to CoinGecko API Endpoints - Removal of`normalized_volume_btc` Data**
+
+**Effective Date: 16 June 2025**
+
+**Affected Endpoints:**
+
+* [Exchange Data by ID](https://docs.coingecko.com/reference/exchanges-id)
+* [Exchanges List with Data](https://docs.coingecko.com/reference/exchanges#/)
+
+**Details of the Change:**
+
+Please be advised that the `normalized_volume_btc` data point will be removed from the above-listed API endpoints, effective 16 June 2025. This change is being implemented due to significant recent change to a 3rd party data source provider, which have fundamentally altered how this specific data can be accessed.
+
+Example of Affected Data Structure:
+
+```json
+  {
+    "trade_volume_24h_btc_normalized": 47765.5886637453
+  },
+```
+
+After the effective date, the `trade_volume_24h_btc_normalized` field will no longer be present in the API responses for these endpoints.
+
+**Action Required:**
+
+If your applications or integrations currently rely on the `trade_volume_24h_btc_normalized` data from these CoinGecko API endpoints, please make the necessary adjustments to your code before 16 June 2025 to avoid potential errors or data discrepancies.

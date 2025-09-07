@@ -1,0 +1,26 @@
+# Included new fields to multiple endpoints
+
+We have added a new field, "details\_platform," to the [/coins/\{id}](/reference/coins-id) and [/coins/\{asset\_platform\_id}/contract/\{contract\_address}](/reference/coins-contract-address) endpoints responses. 
+
+The field contains information about the asset platform, specifically the "decimal\_places," providing details on the decimal places associated with the asset platform. 
+
+**Example of responses:**
+
+```Text JSON
+{
+  "id": "arbitrum",
+  "symbol": "arb",
+  "name": "Arbitrum",
+  "web_slug": "arbitrum",
+  "asset_platform_id": "arbitrum-one",
+  "platforms": {},
+  "detail_platforms": {
+      "arbitrum-one": { 👈
+      	"decimal_place": 18, 👈
+      	"contract_address": "0x912ce59144191c1204e64559fe8253a0e49e6548" 👈
+      },
+      ......
+  }, 
+   ......
+}
+```

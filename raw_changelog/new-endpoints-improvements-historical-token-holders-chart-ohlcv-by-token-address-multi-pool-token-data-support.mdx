@@ -1,0 +1,60 @@
+# New Endpoints & Improvements: Historical Token Holders Chart, OHLCV by Token Address, Multi-pool Token Data Support
+
+## \[Pro-API Exclusive] New Endpoint  - Historical Token Holders Chart by Token Address
+
+This new endpoint allows you to get the historical token holders chart based on the provided token contract address on a network.
+
+* Supported chains include: Solana, EVM (Ethereum, Polygon, BNB, Arbitrum, Optimism, Base), Sui, TON, and Ronin.
+
+Check it out now: [Historical Token Holders Chart by Token Address](https://docs.coingecko.com/reference/token-holders-chart-token-address)
+
+## \[Pro-API Exclusive] New Endpoint  - Token OHLCV chart by Token Address
+
+This endpoint allows you to get the OHLCV chart (Open, High, Low, Close, Volume) of a token based on the provided token address on a network.
+
+* This endpoint will return OHLCV data of the most liquid pool of the specified token. You may use this endpoint Top Pools by Token Address to check the top pools of a token.
+
+Check it out now: [Token OHLCV chart by Token Address](https://docs.coingecko.com/reference/token-ohlcv-token-address#/)
+
+## Improved Endpoints - Support Multi-pool Token Data
+
+Previously, we only surfaced 1 quote token for pools with more than 2 tokens.  With this new improvements, for pools that have 2 or more tokens:
+
+* Extra quote tokens being listed under a new key `relationships.quote_tokens`
+* If `include=quote_token` is flagged, the extra quote tokens will be also listed under `included`
+
+```json
+    "relationships": {  
+      "base_token": {
+        "data": {
+          "id": "eth_0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+          "type": "token"
+        }
+      },
+      "quote_token": {
+        "data": {
+          "id": "eth_0x8353157092ed8be69a9df8f95af097bbf33cb2af",
+          "type": "token"
+        }
+      },
+      "quote_tokens": {
+        "data": [
+          {
+            "id": "eth_0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "type": "token"
+          },
+          {
+            "id": "eth_0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "type": "token"
+          }
+```
+
+This improvement is applicable to all onchain pool endpoints that support `relationships.quote_token`, including but not limited to:
+
+* [Top Pools by Token Address](https://docs.coingecko.com/reference/top-pools-contract-address#/)
+* [Search Pools](https://docs.coingecko.com/reference/search-pools#/)
+* [Megafilter for Pools](https://docs.coingecko.com/reference/pools-megafilter#/)
+* [Trending Pools List](https://docs.coingecko.com/reference/trending-pools-list#/)
+* [Specific Pool Data by Pool Address](https://docs.coingecko.com/reference/pool-address#/)
+* [Top Pools by Network](https://docs.coingecko.com/reference/top-pools-network#/)
+* [New Pools List](https://docs.coingecko.com/reference/latest-pools-list#/)

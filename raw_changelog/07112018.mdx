@@ -1,0 +1,15 @@
+# Improved /coins/{id} endpoint
+
+To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses across multiple exchanges through the [/coins/\{id}](/reference/coins-id) endpoint. 
+
+```json JSON
+{
+"id": "bitcoin",
+"symbol": "btc",
+......
+"last_updated": "2024-02-05T03:45:46.327Z",
+"tickers": [...] //100 items 👈
+}
+```
+
+To retrieve more tickers, kindly utilize [/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint.

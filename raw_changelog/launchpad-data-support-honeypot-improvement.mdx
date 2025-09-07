@@ -1,0 +1,122 @@
+# Now Supported: Launchpad Data (Pump.fun & More), Granular OHLCV, and Honeypot Info
+
+We're excited to announce a major update to our on-chain API endpoints! This release introduces support for popular token launchpads, adds high-frequency OHLCV data, and enhances our honeypot detection capabilities to give you deeper and more timely on-chain insights.
+
+## 🚀 Now Supporting Launchpad Data (Pump.fun & More!)
+
+In addition to the 1,600+ DEXes already integrated with GeckoTerminal.com, you can now track token data from popular launchpad platforms directly through the CoinGecko API. More launchpads will be supported soon!
+
+**New Supported Launchpads:**
+
+| Launchpad                                                                                       | network id (API) | dex id (API)      |
+| :---------------------------------------------------------------------------------------------- | :--------------- | :---------------- |
+| [Meteora DBC](https://www.geckoterminal.com/solana/meteora-dbc/pools)                           | solana           | meteora-dbc       |
+| [Pump.fun](https://www.geckoterminal.com/solana/pump-fun/pools)                                 | solana           | pump-fun          |
+| [Raydium Launchpad](https://www.geckoterminal.com/solana/raydium-launchlab/pools) (LetsBonkFun) | solana           | raydium-launchlab |
+| [Boop.fun](https://www.geckoterminal.com/solana/boop-fun/pools)                                 | solana           | boop-fun          |
+| [Virtuals (Base)](https://www.geckoterminal.com/base/virtuals-base/pools)                       | base             | virtuals-base     |
+
+**Improved endpoints to track launchpad data:**
+
+* [Token Data by Token Address](https://docs.coingecko.com/reference/token-data-contract-address)
+* [Tokens Data by Token Addresses](https://docs.coingecko.com/reference/tokens-data-contract-addresses)
+* [Specific Pool Data by Pool Address](https://docs.coingecko.com/reference/pool-address)
+* [Multiple Pools Data by Pool Addresses](https://docs.coingecko.com/reference/pools-addresses)
+
+More launchpad-specific data will be supported soon for the endpoints above!
+
+**Tips:** use [megafilter endpoint](https://docs.coingecko.com/reference/pools-megafilter) to retrieve latest launchpad data, by flagging `sort=pool_created_at_desc`
+
+**Request example** (Get latest pools on Pump.fun):
+
+```curl
+https://pro-api.coingecko.com/api/v3/onchain/pools/megafilter?page=1&networks=solana&dexes=pump-fun&sort=pool_created_at_desc&x_cg_pro_api_key=YOUR_KEY
+```
+
+## \[Pro-API Exclusive] More Granular OHLCV Data
+
+On-chain OHLCV endpoints now support higher frequency intervals, down to 1-second granularity.
+
+| Timeframe | Aggregate (Before) | Aggregate (New) |
+| :-------- | :----------------- | :-------------- |
+| day       | 1                  | 1               |
+| hour      | 1, 4, 12           | 1, 4, 12        |
+| minute    | 1, 5, 15           | 1, 5, 15        |
+| second    | n/a                | 1, 15, 30       |
+
+**Improved Endpoints:**
+
+* [Pool OHLCV chart by Pool Address](https://docs.coingecko.com/reference/pool-ohlcv-contract-address)
+* [Token OHLCV chart by Token Address](https://docs.coingecko.com/reference/token-ohlcv-token-address)
+
+**New interval supported:**
+
+* 1s
+* 15s
+* 30s
+
+**Example Request (Get the last 100 1-second intervals for a pool on Ethereum):**
+
+```curl
+https://pro-api.coingecko.com/api/v3/onchain/networks/eth/pools/0x06da0fd433c1a5d7a4faa01111c044910a184553/ohlcv/second?aggregate=1&limit=100&include_empty_intervals=false&x_cg_pro_api_key=YOUR_KEY
+```
+
+## 🍯 Enhanced Honeypot Information
+
+We've expanded our honeypot detection features to provide more comprehensive risk assessment. You can now check if a token is a potential honeypot using the main info endpoints.
+
+**Improved Endpoints:**
+
+* [Token Info by Token Address](https://docs.coingecko.com/reference/token-info-contract-address)
+* [Pool Tokens Info by Pool Address](https://docs.coingecko.com/reference/pool-token-info-contract-address)
+
+**Example Payload:**
+
+```json
+{
+ "mint_authority": null,
+ "freeze_authority": null,
+ "is_honeypot": true  // possible values: true / false / unknown
+}
+```
+
+## \[Pro-API Exclusive] New Filtering Option in Megafilter
+
+Previously, the[Pools Megafilter](https://docs.coingecko.com/reference/pools-megafilter) endpoint could only show tokens confirmed as ***not*** a honeypot (`checks=no_honeypot`). Now, you can also include tokens where the honeypot status is 'unknown'.
+
+* To use this, set `include_unknown_honeypot_tokens=true`.
+* Important: This parameter only takes effect when `checks=no_honeypot` is also specified in the request.
+
+**Example Request (Get trending pools that are not confirmed honeypots, including those with an unknown status):**
+
+```curl
+https://pro-api.coingecko.com/api/v3/onchain/pools/megafilter?page=1&sort=h6_trending&checks=no_honeypot&include_unknown_honeypot_tokens=true&x_cg_pro_api_key=YOUR_KEY
+```
+
+## 📈 Expanded Pool Data
+
+**Endpoint**: [Pool Tokens Info by Pool Address](https://docs.coingecko.com/reference/pool-token-info-contract-address)
+
+By adding `include=pool` to your request on the pool tokens endpoint, you can now retrieve additional context about the pool itself.
+
+* Base and quote token address
+* Sentiment vote percentage (positive and negative)
+* Community suspicious reports count
+
+**Payload Example**:
+
+```json
+  "included": [
+    {
+      "id": "eth_0x06da0fd433c1a5d7a4faa01111c044910a184553",
+      "type": "pool",
+      "attributes": {
+        "base_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "quote_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "sentiment_vote_positive_percentage": 100,
+        "sentiment_vote_negative_percentage": 0,
+        "community_sus_report": 0
+      }
+    }
+  ]
+```

@@ -1,0 +1,52 @@
+# Multiple Improvements (Onchain/GT)
+
+* image\_url is now returned in the token response for pools and tokens endpoints:
+
+  Example of responses:
+
+  ```json JSON
+   "data": {
+      "id": "eth_0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "type": "token",
+      "attributes": {
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "image_url": "https://assets.coingecko.com/coins/images/325/small/Tether.png?1696501661", 👈
+        ......
+        "market_cap_usd": "100719721661.467"
+      },
+      "relationships": {}
+  }
+  ```
+* We've added sorting parameters such as order= `h24_volume_usd_desc` and order=` h24_tx_count_desc` for /pools endpoints
+* The 'token' parameter within the [/ohlcv ](/reference/pool-ohlcv-contract-address) endpoint can now accept a token address, provided it exists in the queried pool, to return OHLCV data\
+  Example of endpoint request (**token=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2**):\
+  `https://pro-api.coingecko.com/api/v3/onchain/networks/eth/pools/0x06da0fd433c1a5d7a4faa01111c044910a184553/ohlcv/day?token=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&x_cg_pro_api_key=YOUR_API_KEY`
+* [/ohlcv ](/reference/pool-ohlcv-contract-address) endpoint now includes the base and target token metadata in the response\
+  Example of responses:
+  ```json JSON
+  {
+    "data": {
+      "id": "46303eb4-fba1-44f3-a3c8-c542e4cd5d1a",
+      "type": "ohlcv_request_response",
+      "attributes": {
+        "ohlcv_list": []
+      }
+    },
+    "meta": {
+      "base": {
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "coingecko_coin_id": "tether"
+      },
+      "quote": {
+        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "coingecko_coin_id": "weth"
+      }
+    }
+  }
+  ```

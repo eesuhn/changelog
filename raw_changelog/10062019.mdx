@@ -1,0 +1,54 @@
+# Included new fields
+
+We have introduced two new fields, last\_traded\_at and last\_fetched\_at, to the ticker data. 
+
+The existing timestamp field, which currently reflects the last\_traded\_at value, will be retained for compatibility. 
+
+However, please be advised that the timestamp field may be deprecated in the future. 
+
+We recommend updating your application to make use of the newly added last\_traded\_at and last\_fetched\_at fields for improved accuracy and compatibility.
+
+**Example of responses**: 
+
+[/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint
+
+```json JSON
+{
+  "name": "Bitcoin",
+  "tickers": [
+    {
+      "base": "BTC",
+      "target": "USDT",
+      ......
+      "last_traded_at": "2024-02-05T04:36:55+00:00", 👈
+      "last_fetch_at": "2024-02-05T04:36:55+00:00",  👈
+      ......
+      "coin_id": "bitcoin",
+      "target_coin_id": "tether"
+    },
+    ...
+  ]
+},
+```
+
+[/exchanges/\{id}/tickers ](/reference/exchanges-id-tickers)endpoint
+
+```json JSON
+{
+  "name": "Binance",
+  "tickers": [
+    {
+      "base": "USDC",
+      ......
+      "last_traded_at": "2024-02-05T04:49:34+00:00", 👈
+      "last_fetch_at": "2024-02-05T04:49:34+00:00",  👈
+      ......
+      "coin_id": "usd-coin",
+      "target_coin_id": "tether"
+		},
+    {...},
+    {...},
+  ]
+  
+},
+```

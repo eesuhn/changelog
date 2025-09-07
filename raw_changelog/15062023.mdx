@@ -1,0 +1,12 @@
+# Introduced precision params for other endpoints
+
+The uses of 'precision' parameter allows to specify price data in full or 0-18 decimals, and previously was only made available for [/simple/price](/reference/simple-price) and [/simple/token\_price/\{id}](/reference/simple-token-price) endpoints. 
+
+This parameter is now supported for more endpoints as listed below:
+
+* [/coins/markets](/reference/coins-markets)
+* [/coins/market\_chart](/reference/coins-market-chart)
+* [/coins/\{id}market\_chart/range](/reference/coins-id-market-chart)
+* [/coins/\{id}/contract/\{contract\_address}/market\_chart](/reference/contract-address-market-chart)
+* [/coins/\{id}/contract/\{contract\_address}/market\_chart/range](/reference/contract-address-market-chart-range)
+* [/coins/\{id}/ohlc](/reference/coins-id-ohlc)

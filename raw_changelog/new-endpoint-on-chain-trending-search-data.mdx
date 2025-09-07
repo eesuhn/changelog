@@ -1,0 +1,118 @@
+# New Endpoint & Improvements: On-Chain Trending Data, Enhanced Trending Search, and Improved Token Lookup
+
+## \[Pro-API Exclusive] New Endpoint  - On-chain Trending Search Data
+
+With this new endpoint [Trending Search Pools](https://docs.coingecko.com/reference/trending-search-pools), you can now retrieve the on-chain trending search pools and tokens data, as seen on GeckoTerminal.com .
+
+<Image align="center" src="https://files.readme.io/afea6126601bd7b6cdeeec382df562875440c18bac2e9098988e2c3f76dbce38-Screenshot_2025-03-26_at_12.09.54_PM.png" />
+
+By default, this endpoint returns the top 4 trending pools data, you may specify the `pools` parameter to retrieve up to top 10 pools data.
+
+Tips: you may flag `include=base_token` to retrieve the trending tokens data.
+
+Note:  this exclusive endpoint is available for our API [paid plan](https://www.coingecko.com/en/api/pricing) subscribers (Analyst plan & above).
+
+## \[Pro-API Exclusive] Improved Endpoint - Trending Search List
+
+[Paid plan](https://www.coingecko.com/en/api/pricing) subscribers (Analyst plan & above) can now use [Trending Search List](https://docs.coingecko.com/reference/trending-search) endpoint and flag `show_max` parameter to retrieve more trending coins, NFTs and coin categories on CoinGecko.com.
+
+| Trending Data   | Public API (Demo plan) | Paid API (Analyst plan & above) |
+| :-------------- | :--------------------- | :------------------------------ |
+| Coins           | 15                     | 30                              |
+| NFTs            | 7                      | 10                              |
+| Coin Categories | 6                      | 10                              |
+
+<Image align="center" border={false} caption="Trending Search on CoinGecko.com" src="https://files.readme.io/b3a27b6acdad77c90ab4df9a5fcd023d19ae2a62a3c0aad0dbf718ad809c95b3-Screenshot_2025-04-23_at_4.27.18_PM.png" width="350px" />
+
+## Improved Endpoints - Support Token Lookup by Symbol and Name
+
+The following endpoints now support token lookup by symbol and name, in addition to the existing API ID support:
+
+* [Coin Price by IDs and Symbols](https://docs.coingecko.com/reference/simple-price)
+* [Coins List with Market Data](https://docs.coingecko.com/reference/coins-markets)
+
+Previously, these endpoints only supported token lookup by [API IDs](\[https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins]\(https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins\)).  This enhancement streamlines token data retrieval and eliminates the need for manual coin ID mapping.
+
+Example Mapping:
+
+| API Ids  | Symbol | Name    |
+| :------- | :----- | :------ |
+| bitcoin  | btc    | Bitcoin |
+| tether   | usdt   | Tether  |
+| usd-coin | usdc   | USDC    |
+
+Lookup Priority: When multiple lookup parameters are provided, the system applies the following priority order: id (highest) > name > symbol (lowest).
+
+**Filtering by Symbol with`include_tokens`**
+
+The `include_tokens`parameter has been added to provide flexibility when filtering by symbol:
+
+* `include_tokens=top` : Returns only the top market cap token for the specified symbol.
+* `include_tokens=all`: Returns all tokens that share the specified symbol.
+
+Example Request & Data:
+
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Request Example
+      </th>
+
+      <th>
+        Token Data Returned
+      </th>
+
+      <th>
+        Remarks
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        pro-api.coingecko.com/api/v3/coins/markets?vs\_currency=usd\&symbols=btc\&include\_tokens=top
+      </td>
+
+      <td>
+        1. Bitcoin
+      </td>
+
+      <td>
+        When symbols and 'include\_tokens=**top**' is specified, only the top market cap tokens will be returned.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        pro-api.coingecko.com/api/v3/coins/markets?vs\_currency=usd\&symbols=btc\&include\_tokens=all
+      </td>
+
+      <td>
+        1. Bitcoin
+        2. Osmosis allBTC
+        3. atcat
+        4. Meld Bridged BTC (Meld)
+        5. BlackrockTradingCurrency
+      </td>
+
+      <td>
+        When symbols and 'include\_tokens=**all**' is specified, all the coins that share the same symbol will be returned.
+
+        All the 5 coins stated in the example have the same symbol 'btc'.
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## /coins/markets Endpoint Improvement
+
+We've enhanced the`/coins/markets` endpoint [Coins List with Market Data](https://docs.coingecko.com/reference/coins-markets), by including 'total' and 'per-page' values in the Response Headers.
+
+This addition to the Response Headers enables developers to identify the total number of active coins on coingecko.com and specify the required pagination to retrieve all available data.
+
+```Text Response Header (Example)
+per-page: 250
+total:16989
+```

@@ -1,0 +1,19 @@
+# Included new fields to /exchanges/{id}
+
+We've enhanced the [/exchanges/\{id}](/reference/exchanges-id) endpoint by adding two new fields, public\_notice and alert\_notice. 
+
+These additions provide information on public notices and alerts associated with the specified exchange.
+
+**Example of responses**:
+
+```json JSON
+{
+  "name": "Uniswap V3 (Ethereum)",
+  ......
+  "centralized": false,
+  "public_notice": "This page refers to Uniswap V3. This is an alpha release of the exchange tracker, we will continue to improve the stats here specifically for the new approach introduced by the V3 protocol. For Uniswap V2, please refer to https://www.coingecko.com/en/exchanges/uniswap-v2-ethereum", 👈
+  "alert_notice": "", 👈
+	......
+  "status_updates": []
+}
+```

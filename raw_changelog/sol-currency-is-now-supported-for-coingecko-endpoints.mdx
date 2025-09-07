@@ -1,0 +1,95 @@
+# SOL Currency Is Now Supported for CoinGecko Endpoints
+
+We're excited to announce that you can now obtain real-time and historical price & market data for tokens listed on CoinGecko.com, with the option to return data value in **SOL** (Solana) currency.
+
+Note: for dates prior to May 2025, 'SOL' historical data is limited to hourly and daily granularity
+
+### **Improved endpoints:**
+
+* [Coin Price by IDs](https://docs.coingecko.com/reference/simple-price)
+* [Coin Price by Token Addresses](https://docs.coingecko.com/reference/simple-token-price)
+* [Supported Currencies List](https://docs.coingecko.com/reference/simple-supported-currencies)
+* [Top Gainers & Losers](https://docs.coingecko.com/reference/coins-top-gainers-losers)
+* [Coins List with Market Data](https://docs.coingecko.com/reference/coins-markets)
+* [Coin Data by ID](https://docs.coingecko.com/reference/coins-id)
+* [Coin Historical Data by ID](https://docs.coingecko.com/reference/coins-id-history)
+* [Coin Historical Chart Data by ID](https://docs.coingecko.com/reference/coins-id-market-chart)
+* [Coin Historical Chart Data within Time Range by ID](https://docs.coingecko.com/reference/coins-id-market-chart-range)
+* [Coin OHLC Chart by ID](https://docs.coingecko.com/reference/coins-id-ohlc)
+* [Coin OHLC Chart within Time Range by ID](https://docs.coingecko.com/reference/coins-id-ohlc-range)
+* [Coin Data by Token Address](https://docs.coingecko.com/reference/coins-contract-address)
+* [Coin Historical Chart Data by Token Address](https://docs.coingecko.com/reference/contract-address-market-chart)
+* [Coin Historical Chart Data within Time Range by Token Address](https://docs.coingecko.com/reference/contract-address-market-chart-range)
+* [Trending Search List](https://docs.coingecko.com/reference/trending-search)
+* [Crypto Global Market Data](https://docs.coingecko.com/reference/crypto-global)
+
+**Example**: price of Bitcoin in Solana, using [Coin Price by IDs](https://docs.coingecko.com/reference/simple-price) endpoint.
+
+```json
+{
+  "bitcoin": {
+    "sol": 720.21
+  }
+}
+```
+
+**Example:** historical daily price, market cap and volume of Trump in Solana, using [Coin Historical Chart Data by ID](https://docs.coingecko.com/reference/coins-id-market-chart) endpoint.
+
+```json
+{
+  "prices": [
+    [
+      1750118400000,
+      0.0640701365814472
+    ],
+    [
+      1750204800000,
+      0.0644263929356261
+    ],
+    [
+      1750291200000,
+      0.0639713357587322
+    ],
+    [
+      1750326151000,
+      0.06415963364804504
+    ]
+  ],
+  "market_caps": [
+    [
+      1750118400000,
+      12843589.584485611
+    ],
+    [
+      1750204800000,
+      12882547.839086628
+    ],
+    [
+      1750291200000,
+      12793790.726102708
+    ],
+    [
+      1750326151000,
+      12826247.390733324
+    ]
+  ],
+  "total_volumes": [
+    [
+      1750118400000,
+      2425793.780846796
+    ],
+    [
+      1750204800000,
+      2055697.9106767387
+    ],
+    [
+      1750291200000,
+      1871087.4334618242
+    ],
+    [
+      1750326151000,
+      2008278.189223005
+    ]
+  ]
+}
+```

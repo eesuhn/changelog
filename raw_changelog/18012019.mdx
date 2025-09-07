@@ -1,0 +1,7 @@
+# Set default params value for /coins/markets
+
+To minimize bandwidth usage, the [/coins/markets](/reference/coins-markets) endpoint will now automatically default to retrieving data for the top 100 coins by market cap when the 'ids' parameter is left blank. 
+
+This implies that the Order parameters will automatically default to `market_cap_desc`, ensuring a descending order based on market cap. The `Per_Page` parameters will default to 100, optimizing the response by providing data for the 100 results of coins per page if no coin's ids are mentioned.
+
+This enhancement aims to streamline the user experience while conserving bandwidth resources.

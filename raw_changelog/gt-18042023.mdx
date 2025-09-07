@@ -1,0 +1,40 @@
+# Multiple Improvements (Onchain/GT)
+
+* base\_token\_native\_currency and quote\_token\_native\_currency added to the pools endpoint response. This allows you to obtain price in the network's native currency in addition to in USD
+* reserve\_in\_usd added to the pools endpoint response. This returns the total liquidity/reserve of the pool in USD
+* pool\_created\_at added to the pools endpoint response
+
+Example of responses for [/networks/\{network}/pools/\{address}](/reference/pool-address) :
+
+```json
+{
+"data": {
+    "id": "eth_0xeb2eae8a9912a09cb0f13bfafd5ad56cd263bb3f",
+    "type": "pool",
+    "attributes": {
+    "base_token_price_usd": "0.0000186523882966482",
+    "base_token_price_native_currency": "0.00000000647822280242372", 👈
+    "quote_token_price_usd": "2881.71870575097",
+    "quote_token_price_native_currency": "1.0", 👈
+    "base_token_price_quote_token": "0.000000006478222802",
+    "quote_token_price_base_token": "154363323",
+    "address": "0xeb2eae8a9912a09cb0f13bfafd5ad56cd263bb3f",
+    "name": "DGX-1 / WETH",
+    "pool_created_at": "2024-02-18T08:10:59Z", 👈
+    "fdv_usd": "784687",
+    "market_cap_usd": null,
+    "price_change_percentage": {
+    "h1": "34.67",
+    "h24": "8406.81"
+    },
+    "transactions": {},
+    "volume_usd": {},
+    "reserve_in_usd": "110214.6247" 👈
+    },
+    "relationships": {}
+    }
+}
+```
+
+* [/networks/\{network}/new\_pools](/reference/latest-pools-network) endpoint added to query new pools discovered for a network
+* [/networks/new\_pools](/reference/latest-pools-list) endpoint added to query new pools discovered across all networks

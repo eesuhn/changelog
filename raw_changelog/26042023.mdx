@@ -1,0 +1,18 @@
+# Included new fields
+
+We've added  'watchlist\_portfolio\_users' field to [/coins/\{id}](/reference/coins-id) endpoint responses. 
+
+This refers to number of users who added the coin into a watchlist or portfolio.
+
+**Example of responses:**
+
+```json JSON
+{
+"id": "bitcoin",
+......
+"watchlist_portfolio_users": 1449601, 👈
+"market_cap_rank": 1,
+......
+"tickers": []
+}
+```

@@ -1,0 +1,9 @@
+# Added interval hourly params to /coins/{id}/ohlc
+
+We've expanded functionality to include support for the `interval=hourly` parameter within the [/coins/\{id}/ohlc](/reference/coins-id-ohlc) endpoint.
+
+Users can use this parameter to retrieve OHLC (Open/High/Low/Close) data on a hourly interval for up to 90 days of the date range.
+
+Example of endpoint request:
+
+`https://pro-api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=1&interval=hourly&x_cg_pro_api_key=YOUR_API_KEY`

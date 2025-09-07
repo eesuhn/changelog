@@ -1,0 +1,186 @@
+# New Endpoint & Improvements: On-Chain Trades, Net Buy Volume, and More
+
+## \[Pro-API Exclusive] New Endpoint  - On-chain Trades by Token Address
+
+Previously, the [Past 24 Hour Trades by Pool Address](https://docs.coingecko.com/reference/pool-trades-contract-address) endpoint allows you to retrieve the last 300 trades of a specific pool only.
+
+With this new endpoint [Past 24 Hour Trades by Token Address](https://docs.coingecko.com/reference/token-trades-contract-address), you can now retrieve the last 300 trades **across different pools**, based on the provided **token contract address** on a network.
+
+## Improved Endpoints - Support Net Buy Volume Data
+
+The following endpoints now support more volume breakdown data:
+
+* [Specific Pool Data by Pool Address](https://docs.coingecko.com/reference/pool-address)
+* [Multiple Pools Data by Pool Addresses](https://docs.coingecko.com/reference/pools-addresses#/)
+
+By flagging `include_volume_breakdown=true` , you can surface the following data:
+
+* net\_buy\_volume\_usd
+* buy\_volume\_usd
+* sell\_volume\_usd
+
+Sample Response:
+
+```json JSON
+{
+  "data": {
+    "id": "eth_0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+    "type": "pool",
+    "attributes": {
+      ...
+      },
+      "net_buy_volume_usd": {
+        "m5":  "-40796.577553965",
+        "m15": "-69765.771189161",
+        "m30": "-88014.095440243",
+        "h1":   "0.000000000000",
+        "h6":   "1884879.921855301",
+        "h24":  "17555422.243003801"
+      },
+      "buy_volume_usd": {
+        "m5":  "30597.433165473",
+        "m15": "139531.542378324",
+        "m30": "396063.429481099",
+        "h1":  "969922.728762430",
+        "h6":  "10366839.570204150",
+        "h24": "52666266.729011402"
+      },
+      "sell_volume_usd": {
+        "m5":  "71394.010719438",
+        "m15": "209297.313567485",
+        "m30": "484077.524921342",
+        "h1":  "969922.728762430",
+        "h6":  "8481959.648348849",
+        "h24": "35110844.486007601"
+      },
+```
+
+## Improved Endpoint - On-Chain OHLCV endpoint
+
+[Pool OHLCV chart by Pool Address](https://docs.coingecko.com/reference/pool-ohlcv-contract-address) endpoint now supports to include empty intervals by flagging `include_empty_intervals=true` .
+
+* By default, specific timeframe intervals (e.g. minutely) with no recorded swaps are excluded (or **skipped**) from the response.
+* This new parameter option provides the flexibility to get **padded** data, when there's no trade data.
+
+Sample Response:
+
+```json
+{
+  "data": {
+    "id": "81da0682-1c4f-445a-9bed-9b5454004df5",
+    "type": "ohlcv_request_response",
+    "attributes": {
+      "ohlcv_list": [
+        [
+          1744712700,
+          0.000212149802253853,
+          0.000212173305907688,
+          0.000212149802253853,
+          0.000212173305907688,
+          46.48164903882
+        ],
+        [
+          1744712400,
+          0.000212149802253853,  👈 O — Follow previous Close value
+          0.000212149802253853,  👈 H — Follow previous Close value
+          0.000212149802253853,  👈 L — Follow previous Close value
+          0.000212149802253853,  👈 C — Follow previous Close value
+          0.0  👈 V — Set to zero
+        ],
+        [
+          1744712100,
+          0.000210532522666822,
+          0.000212149802253853,
+          0.000210532522666822,
+          0.000212149802253853,  👈 Previous Close value
+          46.4765
+        ],
+...
+}
+```
+
+## Improved Endpoints - Support Large Images
+
+The following endpoints now support more size options for coin logo image:
+
+* [Token Info by Token Address](https://docs.coingecko.com/reference/token-info-contract-address)
+* [Pool Tokens Info by Pool Address](https://docs.coingecko.com/reference/pool-token-info-contract-addres)
+
+Sample Response:
+
+```json
+  "data": {
+    "id": "eth_0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "type": "token",
+    "attributes": {
+...
+      "image_url": "https://assets.coingecko.com/coins/images/325/small/Tether.png?1696501661",
+      "image": {
+        "thumb": "https://assets.coingecko.com/coins/images/325/thumb/Tether.png?1696501661",
+        "small": "https://assets.coingecko.com/coins/images/325/small/Tether.png?1696501661",
+        "large": "https://assets.coingecko.com/coins/images/325/large/Tether.png?1696501661"
+      },
+```
+
+## Improved Endpoints - Support Normalized Supply Data
+
+The following endpoints now support `normalized_total_supply`:
+
+* [Token Data by Token Address](https://docs.coingecko.com/reference/token-data-contract-address)
+* [Tokens Data by Token Addresses](https://docs.coingecko.com/reference/tokens-data-contract-addresses)
+
+Sample Response:
+
+```json
+      "decimals": 6,
+      "total_supply": "49999156520373530.0",
+      "normalized_total_supply": "49999156520.37353",
+```
+
+## Improved Endpoints - Support Pool 'Name' and 'Fee' Data
+
+The following endpoints now support `pool_name` and `pool_fee`:
+
+* [Specific Pool Data by Pool Address](https://docs.coingecko.com/reference/pool-address)
+* [Multiple Pools Data by Pool Addresses](https://docs.coingecko.com/reference/pools-addresses)
+
+Sample Response:
+
+```json
+        "name": "WETH / USDC 0.05%",
+        "pool_name": "WETH / USDC",
+        "pool_fee_percentage": "0.05",
+```
+
+## Improved Endpoints - Support Symbols of DEX Pairs
+
+The following endpoints now allow to flag `dex_pair_format=symbol` to return DEX pair symbols instead of contract address.
+
+* [Coin Data by ID](https://docs.coingecko.com/reference/coins-id)
+* [Coin Tickers by ID](https://docs.coingecko.com/reference/coins-id-tickers)
+* [Exchange Tickers by ID](https://docs.coingecko.com/reference/exchanges-id-tickers)
+* [Exchange Data by ID](https://docs.coingecko.com/reference/exchanges-id)
+
+Sample Response:
+
+```json
+// before
+{
+      "base": "0X8FC8F8269EBCA376D046CE292DC7EAC40C8D358A",
+      "target": "0XA0B86991C6218B36C1D19D4A2E9EB0CE3606EB48",
+      "market": {
+        "name": "Uniswap V2 (Ethereum)",
+        "identifier": "uniswap_v2",
+...
+}
+
+// now when "dex_pair_format=symbol" is flagged
+{
+      "base": "DFI",
+      "target": "USDC",
+      "market": {
+        "name": "Uniswap V2 (Ethereum)",
+        "identifier": "uniswap_v2",
+...
+}
+```

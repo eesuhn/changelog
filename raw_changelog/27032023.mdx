@@ -1,0 +1,22 @@
+# Included new fields
+
+We've added "links" field (e.g. homepage, twitter, discord) to these NFT endpoints responses: 
+
+* [/nfts/\{id}](/reference/nfts-id)
+* [/nfts/\{asset\_platform}/contract/\{contract\_address}](/reference/nfts-contract-address)
+
+**Example of responses:**
+
+```json
+{
+  "id": "pudgy-penguins",
+  "contract_address": "0xBd3531dA5CF5857e7CfAA92426877b022e612cf8",
+  .......
+  "links": {
+    "homepage": "https://www.pudgypenguins.com/", 👈
+    "twitter": "https://twitter.com/pudgypenguins",👈
+    "discord": "https://discord.gg/pudgypenguins" 👈
+  },
+	.......
+}
+```

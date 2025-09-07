@@ -1,0 +1,15 @@
+# Improved /exchanges/{id} endpoint
+
+To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses for a specific exchange through the [/exchanges/\{id}](/reference/exchanges-id) endpoint. 
+
+```json
+{
+  "name": "Binance",
+  "year_established": 2017,
+  ......
+  "tickers": [...], //100 items 👈
+  "status_updates": [...] //7 items
+}
+```
+
+To retrieve more tickers, kindly utilize [/exchanges/\{id}/tickers](/reference/exchanges-id-tickers) endpoint.

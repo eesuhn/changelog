@@ -11,7 +11,7 @@ from collections import defaultdict
 
 ROOT_DIR = Path.cwd()
 CHANGELOG_RSS = ROOT_DIR / "changelog.rss"
-MARKDOWN_DIR = ROOT_DIR / "markdown"
+RAW_DIR = ROOT_DIR / "raw_changelog"
 OUTPUT_FILE = ROOT_DIR / "changelog.mdx"
 
 
@@ -37,6 +37,18 @@ def get_changelog_rss() -> list:
     return items
 
 
+def clean_mdx_content(content):
+    content = re.sub(r"<br\s*/?>", "", content)
+    content = re.sub(r"\n{3,}", "\n\n", content)
+    
+    content = content.replace("‘", "'")
+    content = content.replace("’", "'")
+    content = content.replace('“', '"')
+    content = content.replace('”', '"')
+
+    return content
+
+
 def fetch_markdown_content(url):
     markdown_url = url + ".md"
     response = requests.get(markdown_url, timeout=30)
@@ -45,11 +57,13 @@ def fetch_markdown_content(url):
 
 
 def save_mdx_file(content, slug):
-    MARKDOWN_DIR.mkdir(parents=True, exist_ok=True)
-    file_path = MARKDOWN_DIR / f"{slug}.mdx"
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    file_path = RAW_DIR / f"{slug}.mdx"
+
+    cleaned_content = clean_mdx_content(content)
 
     with open(file_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write(cleaned_content)
     return True
 
 
@@ -112,9 +126,10 @@ def add_heading_level_and_date(content, pub_date, spaces=2):
 
 
 def read_mdx_file(slug):
-    file_path = MARKDOWN_DIR / f"{slug}.mdx"
+    file_path = RAW_DIR / f"{slug}.mdx"
     with open(file_path, "r", encoding="utf-8") as f:
-        return f.read()
+        content = f.read()
+    return clean_mdx_content(content)
 
 
 def fetch_all_markdown():
@@ -174,15 +189,15 @@ def main():
             fetch_all_markdown()
         elif command == "combine":
             combine_changelog()
-        elif command == "all":
+        elif command == "both":
             if fetch_all_markdown():
                 combine_changelog()
         else:
-            print("Usage: python main.py [fetch|combine|all]")
+            print("Usage: python main.py [fetch|combine|both]")
     else:
         changelog_items = get_changelog_rss()
         print(f"Found {len(changelog_items)} changelog items.")
-        print("Usage: python main.py [fetch|combine|all]")
+        print("Usage: python main.py [fetch|combine|both]")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,20 @@
+# Included new fields
+
+We've added "symbol" field to these NFT endpoints responses:
+
+* [/nfts/markets](/reference/nfts-markets)
+* [/nfts/\{id} ](/reference/nfts-id)
+* [/nfts/\{assets\_platform}/contract/\{contract\_address}](/reference/nfts-contract-address)
+
+**Example of responses:**
+
+```Text JSON
+{
+	"id": "pudgy-penguins",
+  "contract_address": "0xBd3531dA5CF5857e7CfAA92426877b022e612cf8",
+  "asset_platform_id": "ethereum",
+  "name": "Pudgy Penguins",
+  "symbol": "PPG", 👈
+  ....
+},
+```

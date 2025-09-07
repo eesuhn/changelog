@@ -1,0 +1,35 @@
+# Multiple Improvements
+
+The web\_slug data is now available in the following endpoints.
+
+* [/coins/\{id}](/reference/coins-id)
+* [/coins/\{contract}/contract/\{contract\_address}](/reference/coins-contract-address)
+
+This addition allows users to accurately link to a CoinGecko coin page using [www.coingecko.com/en/\{web\_slug}](http://www.coingecko.com/en/\{web_slug}).
+
+**Example of responses:**
+
+```Text JSON
+{
+  "id": "bitcoin",
+  "symbol": "btc",
+  "name": "Bitcoin",
+  "web_slug": "bitcoin", 👈
+  ......
+  "tickers": [...]
+}
+```
+
+For the [/asset\_platforms](/reference/asset-platforms-list) endpoint, we've introduced the native\_coin\_id data. This enables users to obtain the coin ID of different blockchain networks or asset platforms that may not have a contract address to look up
+
+**Example of responses:**
+
+```Text JSON
+{
+  "id": "polygon-pos",
+  "chain_identifier": 137,
+  "name": "Polygon POS",
+  "shortname": "MATIC", 
+  "native_coin_id": "matic-network" 👈
+},
+```

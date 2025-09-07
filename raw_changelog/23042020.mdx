@@ -1,0 +1,26 @@
+# Included new fields to /coins/markets
+
+We've introduced three new fields atl, atl\_change\_percentage, and atl\_date to the responses of [/coins/markets](/reference/coins-markets) endpoint. 
+
+These additions provide valuable data on the all-time low (atl) price, percentage change since the all-time low, and the date of the all-time low for improved analysis and insights. 
+
+**Example of responses:**
+
+```json
+[
+  {
+  "id": "bitcoin",
+  "symbol": "btc",
+  
+  "ath": 69045,
+  "ath_change_percentage": -38.01241,
+  "ath_date": "2021-11-10T14:24:11.849Z",
+  "atl": 67.81, 👈
+  "atl_change_percentage": 63017.26399, 👈
+  "atl_date": "2013-07-06T00:00:00.000Z", 👈
+  "roi": null,
+  "last_updated": "2024-02-05T07:23:50.583Z"
+	},
+  ......
+]
+```

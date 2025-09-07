@@ -1,0 +1,27 @@
+# Included new field for /coins/{id} endpoint
+
+We've included a new field "whitepaper" under "links" section for [/coins/\{id}](/reference/coins-id) endpoint 
+
+**Example of responses:**
+
+```json
+{
+  "id": "bitcoin",
+  ......
+  "links": {
+    "homepage": [],
+    "whitepaper": "https://bitcoin.org/bitcoin.pdf", 👈
+    "blockchain_site": [],
+    "official_forum_url": [],
+    "chat_url": [],
+    "announcement_url": [],
+    "twitter_screen_name": "bitcoin",
+    "facebook_username": "bitcoins",
+    "bitcointalk_thread_identifier": null,
+    "telegram_channel_identifier": "",
+    "subreddit_url": "https://www.reddit.com/r/Bitcoin/",
+    "repos_url": {}
+  },
+  .......
+}
+```

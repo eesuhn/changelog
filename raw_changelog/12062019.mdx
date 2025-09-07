@@ -1,0 +1,46 @@
+# Included new trust score field to tickers
+
+We have added `trust_score` field to [/coins/\{id}/tickers](/reference/coins-id-tickers) and [/exchanges/\{id}/tickers](/reference/exchanges-id-tickers) endpoints
+
+**Example of responses:**
+
+[/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint
+
+```json JSON
+{
+  "name": "Bitcoin",
+  "tickers": [
+    {
+      "base": "BTC",
+      "target": "USDT",
+      ......
+      "trust_score": "green", 👈
+      ........
+      "coin_id": "bitcoin",
+      "target_coin_id": "tether"
+    },
+    ...
+  ]
+},
+```
+
+[/exchanges/\{id}/tickers ](/reference/exchanges-id-tickers) endpoint
+
+```json JSON
+{
+  "name": "Binance",
+  "tickers": [
+    {
+      "base": "USDC",
+      ......
+      "trust_score": "green", 👈
+      ......
+      "coin_id": "usd-coin",
+      "target_coin_id": "tether"
+		},
+    {...},
+    {...},
+  ]
+  
+},
+```
