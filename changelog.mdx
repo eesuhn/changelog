@@ -3,11 +3,19 @@ title: "Changelog"
 description: "Product updates and announcements"
 ---
 
+export const GreenSeparator = () => (
+  <div style={{
+    height: '2px',
+    background: 'linear-gradient(to right, transparent, #4BCC00, transparent)',
+    margin: '20px 0 60px 0',
+    border: 'none'
+  }} />
+);
+
 <Update label="August 2025">
   ## Improved Update Frequency for selected Pro-API On-chain Endpoints
 
   🗓️ **August 18, 2025**
-
 
   [Changes below are applicable to all [paid plan subscribers](https://www.coingecko.com/en/api/pricing).]
 
@@ -41,10 +49,11 @@ description: "Product updates and announcements"
 
   **CoinGecko API Team**
 
+<GreenSeparator />
+
   ## Now Supported: Launchpad Data (Pump.fun & More), Granular OHLCV, and Honeypot Info
 
   🗓️ **August 05, 2025**
-
 
   We're excited to announce a major update to our on-chain API endpoints! This release introduces support for popular token launchpads, adds high-frequency OHLCV data, and enhances our honeypot detection capabilities to give you deeper and more timely on-chain insights.
 
@@ -79,7 +88,7 @@ description: "Product updates and announcements"
   https://pro-api.coingecko.com/api/v3/onchain/pools/megafilter?page=1&networks=solana&dexes=pump-fun&sort=pool_created_at_desc&x_cg_pro_api_key=YOUR_KEY
   ```
 
-  ### \[Pro-API Exclusive] More Granular OHLCV Data
+  ### [Pro-API Exclusive] More Granular OHLCV Data
 
   On-chain OHLCV endpoints now support higher frequency intervals, down to 1-second granularity.
 
@@ -126,7 +135,7 @@ description: "Product updates and announcements"
   }
   ```
 
-  ### \[Pro-API Exclusive] New Filtering Option in Megafilter
+  ### [Pro-API Exclusive] New Filtering Option in Megafilter
 
   Previously, the[Pools Megafilter](https://docs.coingecko.com/reference/pools-megafilter) endpoint could only show tokens confirmed as ***not*** a honeypot (`checks=no_honeypot`). Now, you can also include tokens where the honeypot status is 'unknown'.
 
@@ -173,7 +182,6 @@ description: "Product updates and announcements"
   ## SOL Currency Is Now Supported for CoinGecko Endpoints
 
   🗓️ **June 19, 2025**
-
 
   We're excited to announce that you can now obtain real-time and historical price & market data for tokens listed on CoinGecko.com, with the option to return data value in **SOL** (Solana) currency.
 
@@ -269,12 +277,13 @@ description: "Product updates and announcements"
   }
   ```
 
+<GreenSeparator />
+
   ## New Endpoints & Improvements: Historical Token Holders Chart, OHLCV by Token Address, Multi-pool Token Data Support
 
   🗓️ **June 09, 2025**
 
-
-  ### \[Pro-API Exclusive] New Endpoint  - Historical Token Holders Chart by Token Address
+  ### [Pro-API Exclusive] New Endpoint  - Historical Token Holders Chart by Token Address
 
   This new endpoint allows you to get the historical token holders chart based on the provided token contract address on a network.
 
@@ -282,7 +291,7 @@ description: "Product updates and announcements"
 
   Check it out now: [Historical Token Holders Chart by Token Address](https://docs.coingecko.com/reference/token-holders-chart-token-address)
 
-  ### \[Pro-API Exclusive] New Endpoint  - Token OHLCV chart by Token Address
+  ### [Pro-API Exclusive] New Endpoint  - Token OHLCV chart by Token Address
 
   This endpoint allows you to get the OHLCV chart (Open, High, Low, Close, Volume) of a token based on the provided token address on a network.
 
@@ -340,7 +349,6 @@ description: "Product updates and announcements"
 
   🗓️ **May 30, 2025**
 
-
   **Notice: Upcoming Change to CoinGecko API Endpoints - Removal of`normalized_volume_btc` Data**
 
   **Effective Date: 16 June 2025**
@@ -368,12 +376,13 @@ description: "Product updates and announcements"
 
   If your applications or integrations currently rely on the `trade_volume_24h_btc_normalized` data from these CoinGecko API endpoints, please make the necessary adjustments to your code before 16 June 2025 to avoid potential errors or data discrepancies.
 
+<GreenSeparator />
+
   ## New Endpoint & Improvements: On-Chain Trades, Net Buy Volume, and More
 
   🗓️ **May 29, 2025**
 
-
-  ### \[Pro-API Exclusive] New Endpoint  - On-chain Trades by Token Address
+  ### [Pro-API Exclusive] New Endpoint  - On-chain Trades by Token Address
 
   Previously, the [Past 24 Hour Trades by Pool Address](https://docs.coingecko.com/reference/pool-trades-contract-address) endpoint allows you to retrieve the last 300 trades of a specific pool only.
 
@@ -388,9 +397,9 @@ description: "Product updates and announcements"
 
   By flagging `include_volume_breakdown=true` , you can surface the following data:
 
-  * net\_buy\_volume\_usd
-  * buy\_volume\_usd
-  * sell\_volume\_usd
+  * net_buy_volume_usd
+  * buy_volume_usd
+  * sell_volume_usd
 
   Sample Response:
 
@@ -565,12 +574,9 @@ description: "Product updates and announcements"
 
   🗓️ **April 25, 2025**
 
-
-  ### \[Pro-API Exclusive] New Endpoint  - On-chain Trending Search Data
+  ### [Pro-API Exclusive] New Endpoint  - On-chain Trending Search Data
 
   With this new endpoint [Trending Search Pools](https://docs.coingecko.com/reference/trending-search-pools), you can now retrieve the on-chain trending search pools and tokens data, as seen on GeckoTerminal.com .
-
-  <Image align="center" src="https://files.readme.io/afea6126601bd7b6cdeeec382df562875440c18bac2e9098988e2c3f76dbce38-Screenshot_2025-03-26_at_12.09.54_PM.png" />
 
   By default, this endpoint returns the top 4 trending pools data, you may specify the `pools` parameter to retrieve up to top 10 pools data.
 
@@ -578,7 +584,7 @@ description: "Product updates and announcements"
 
   Note:  this exclusive endpoint is available for our API [paid plan](https://www.coingecko.com/en/api/pricing) subscribers (Analyst plan & above).
 
-  ### \[Pro-API Exclusive] Improved Endpoint - Trending Search List
+  ### [Pro-API Exclusive] Improved Endpoint - Trending Search List
 
   [Paid plan](https://www.coingecko.com/en/api/pricing) subscribers (Analyst plan & above) can now use [Trending Search List](https://docs.coingecko.com/reference/trending-search) endpoint and flag `show_max` parameter to retrieve more trending coins, NFTs and coin categories on CoinGecko.com.
 
@@ -588,8 +594,6 @@ description: "Product updates and announcements"
   | NFTs            | 7                      | 10                              |
   | Coin Categories | 6                      | 10                              |
 
-  <Image align="center" border={false} caption="Trending Search on CoinGecko.com" src="https://files.readme.io/b3a27b6acdad77c90ab4df9a5fcd023d19ae2a62a3c0aad0dbf718ad809c95b3-Screenshot_2025-04-23_at_4.27.18_PM.png" width="350px" />
-
   ### Improved Endpoints - Support Token Lookup by Symbol and Name
 
   The following endpoints now support token lookup by symbol and name, in addition to the existing API ID support:
@@ -597,7 +601,7 @@ description: "Product updates and announcements"
   * [Coin Price by IDs and Symbols](https://docs.coingecko.com/reference/simple-price)
   * [Coins List with Market Data](https://docs.coingecko.com/reference/coins-markets)
 
-  Previously, these endpoints only supported token lookup by [API IDs](\[https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins]\(https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins\)).  This enhancement streamlines token data retrieval and eliminates the need for manual coin ID mapping.
+  Previously, these endpoints only supported token lookup by [API IDs]([https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins](https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins\)).  This enhancement streamlines token data retrieval and eliminates the need for manual coin ID mapping.
 
   Example Mapping:
 
@@ -618,59 +622,10 @@ description: "Product updates and announcements"
 
   Example Request & Data:
 
-  <Table align={["left","left","left"]}>
-    <thead>
-      <tr>
-        <th>
-          Request Example
-        </th>
-
-        <th>
-          Token Data Returned
-        </th>
-
-        <th>
-          Remarks
-        </th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>
-          pro-api.coingecko.com/api/v3/coins/markets?vs\_currency=usd\&symbols=btc\&include\_tokens=top
-        </td>
-
-        <td>
-          1. Bitcoin
-        </td>
-
-        <td>
-          When symbols and 'include\_tokens=**top**' is specified, only the top market cap tokens will be returned.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          pro-api.coingecko.com/api/v3/coins/markets?vs\_currency=usd\&symbols=btc\&include\_tokens=all
-        </td>
-
-        <td>
-          1. Bitcoin
-          2. Osmosis allBTC
-          3. atcat
-          4. Meld Bridged BTC (Meld)
-          5. BlackrockTradingCurrency
-        </td>
-
-        <td>
-          When symbols and 'include\_tokens=**all**' is specified, all the coins that share the same symbol will be returned.
-
-          All the 5 coins stated in the example have the same symbol 'btc'.
-        </td>
-      </tr>
-    </tbody>
-  </Table>
+  | Request Example | Token Data Returned | Remarks |
+  |:---|:---|:---|
+  | pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&symbols=btc&include_tokens=top | 1. Bitcoin | When symbols and 'include_tokens=**top**' is specified, only the top market cap tokens will be returned. |
+  | pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&symbols=btc&include_tokens=all | 1. Bitcoin<br/>2. Osmosis allBTC<br/>3. atcat<br/>4. Meld Bridged BTC (Meld)<br/>5. BlackrockTradingCurrency | When symbols and 'include_tokens=**all**' is specified, all the coins that share the same symbol will be returned.<br/><br/>All the 5 coins stated in the example have the same symbol 'btc'. |
 
   ### /coins/markets Endpoint Improvement
 
@@ -683,10 +638,11 @@ description: "Product updates and announcements"
   total:16989
   ```
 
+<GreenSeparator />
+
   ## Upcoming Change Notice: Removal of twitter_followers Data
 
   🗓️ **April 25, 2025**
-
 
   **Notice: Upcoming Change to CoinGecko API Endpoints - Removal of`twitter_followers` Data**
 
@@ -730,12 +686,9 @@ description: "Product updates and announcements"
 
   🗓️ **March 28, 2025**
 
-
   ### [Pro-API Exclusive] New Endpoint  - Top Token Holder Address Data
 
   You can now access the top 50 token holder address data for tokens, as seen on GeckoTerminal.com. 
-
-  <Image align="center" src="https://files.readme.io/aa36fd948aa8fa813161aa927b3fdf5d7aaf9b5c3d30c1d6b9954a138b752c17-Screenshot_2025-03-26_at_12.10.28_PM.png" />
 
   By default, this endpoint returns the top 10 holders data, you can also specify the `holders` parameter to retrieve up to top 50 holders data. 
 
@@ -844,12 +797,13 @@ description: "Product updates and announcements"
 
   If you require the Market Cap key (`market_cap_usd`) to return FDV value (as seen on GeckoTerminal.com) when Market Cap data is unavailable, please specify this parameter `marketcap_fdv_fallback=true`.
 
+<GreenSeparator />
+
   ## Update Frequency Improvements for selected Pro-API endpoints (March 2025)
 
   🗓️ **March 14, 2025**
 
-
-  \[Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
+  [Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
 
   Dear CoinGecko API paid plan subscribers, 
 
@@ -884,10 +838,11 @@ description: "Product updates and announcements"
 
   **CoinGecko API Team**
 
+<GreenSeparator />
+
   ## Multiple Improvement: Holders data, Pool Stats, Simple Token Price
 
   🗓️ **March 14, 2025**
-
 
   ### Onchain Token Info endpoints - Holders data
 
@@ -1031,7 +986,6 @@ description: "Product updates and announcements"
 
   🗓️ **February 27, 2025**
 
-
   Powered by GeckoTerminal, the CoinGecko API now supports on-chain data across **200+ blockchain networks**, including the latest additions: Hyperliquid, HyperEVM, Abstract, Berachain, Story, Monad, Unichain, and Soneium.
 
   While we offer the widest on-chain data coverage, we understand that you may have specific needs when slicing and dicing data for your use case. That's why we're introducing Megafilter, an exclusive endpoint available for our API paid plan subscribers (Analyst plan & above).
@@ -1041,8 +995,6 @@ description: "Product updates and announcements"
   This new endpoint provides unmatched flexibility, allowing you to query and filter data exactly the way you want.
 
   🔗 Docs: [Megafilter for Pools](https://docs.coingecko.com/reference/pools-megafilter) 
-
-  <Image align="center" src="https://files.readme.io/ffc66ef37f89d3de4d1b76b330d5cc75165bbd9684253e1b9992523d49cf8015-megafilter.png" />
 
   ### 👀 What Can You Do?
 
@@ -1065,12 +1017,13 @@ description: "Product updates and announcements"
   🚀 API Docs: [Megafilter for Pools](https://docs.coingecko.com/reference/pools-megafilter)\
   🔗 Live Filtering on [GeckoTerminal](https://www.geckoterminal.com/)
 
+<GreenSeparator />
+
   ## Update Frequency Improvements for selected Pro-API endpoints
 
   🗓️ **February 14, 2025**
 
-
-  \[Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
+  [Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
 
   Dear CoinGecko API paid plan subscribers, 
 
@@ -1078,8 +1031,8 @@ description: "Product updates and announcements"
 
   | Endpoints                                                                                                             | Effective Date & Time                                            | Current Update Frequency | New Update Frequency |
   | :-------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------- | :----------------------- | :------------------- |
-  | Onchain [/networks/../tokens/\{address}](https://docs.coingecko.com/reference/token-data-contract-address)            | 02:00 UTC, February 24, 2025                                     | 60s                      | 30s                  |
-  | Onchain [/networks/../tokens/multi/\{addresses}](https://docs.coingecko.com/reference/tokens-data-contract-addresses) | 06:00 UTC, February 24, 2025                                     | 60s                      | 30s                  |
+  | Onchain [/networks/../tokens/{address}](https://docs.coingecko.com/reference/token-data-contract-address)            | 02:00 UTC, February 24, 2025                                     | 60s                      | 30s                  |
+  | Onchain [/networks/../tokens/multi/{addresses}](https://docs.coingecko.com/reference/tokens-data-contract-addresses) | 06:00 UTC, February 24, 2025                                     | 60s                      | 30s                  |
   | Onchain [/networks/../pools/../ohlcv](https://docs.coingecko.com/reference/pool-ohlcv-contract-address)               | 02:00 UTC, February 25, 2025 - Enterprise plan subscribers only  | 60s                      | 30s                  |
   | Onchain [/networks/../pools/../ohlcv](https://docs.coingecko.com/reference/pool-ohlcv-contract-address)               | 02:00 UTC, February 26, 2025 - Analyst/Lite/Pro plan subscribers | 60s                      | 30s                  |
 
@@ -1097,10 +1050,11 @@ description: "Product updates and announcements"
 
   **CoinGecko API Team**
 
+<GreenSeparator />
+
   ## Enhanced Onchain Metadata, Increased Max Address Limit for Multi Endpoints, Improved Exchange Tickers Sorting
 
   🗓️ **February 09, 2025**
-
 
   ### Onchain Metadata: Improved Coverage
 
@@ -1152,12 +1106,12 @@ description: "Product updates and announcements"
 
   ### Improved Data Consistency for Exchange Tickers by ID
 
-  For [Exchange Tickers by ID](https://docs.coingecko.com/reference/exchanges-id-tickers) endpoint, the order is sorted by **trust\_score\_desc** by default. 
+  For [Exchange Tickers by ID](https://docs.coingecko.com/reference/exchanges-id-tickers) endpoint, the order is sorted by **trust_score_desc** by default. 
 
   * Sometimes duplicate or missing data may occur due to paginated cached response, especially when a ticker's rank changes between 2 paginated requests, e.g. it might shift from Page 2 to Page 1, vice versa.   
-  * We've added a new `order` option: **base\_target**, which will sort the tickers by **base** symbol, then **target** symbol, in lexicographical order, i.e. `0->9`, then `a->Z`.
+  * We've added a new `order` option: **base_target**, which will sort the tickers by **base** symbol, then **target** symbol, in lexicographical order, i.e. `0->9`, then `a->Z`.
 
-  Example:  flagging ?order=base\_target
+  Example:  flagging ?order=base_target
 
   ```
   pro-api.coingecko.com/api/v3/exchanges/binance/tickers?order=base_target
@@ -1171,7 +1125,6 @@ description: "Product updates and announcements"
   ## Multiple Improvements: Onchain Pools Page Limit, Trades Token Filter
 
   🗓️ **January 27, 2025**
-
 
   ### Onchain Pools Data: Supports more than 10 pages of data
 
@@ -1212,10 +1165,11 @@ description: "Product updates and announcements"
   ?token=8FqXr6dw5NHA2TtwFeDz6q9p7y9uWyoEdZmpXqqUpump // get the trades data of specific token based on address
   ```
 
+<GreenSeparator />
+
   ## Multiple Improvements: Onchain Token Price, NFT Market Cap
 
   🗓️ **January 24, 2025**
-
 
   ### Onchain Simple Token Price: Added Market Cap and 24h Volume Data
 
@@ -1259,10 +1213,11 @@ description: "Product updates and announcements"
 
   ```
 
+<GreenSeparator />
+
   ## Removal of Unsupported Categories
 
   🗓️ **January 23, 2025**
-
 
   ### Upcoming Removal of Unsupported Categories from CoinGecko and CoinGecko API
 
@@ -1302,10 +1257,11 @@ description: "Product updates and announcements"
 
   Ensure applications using the `/coins/markets` [endpoint](https://docs.coingecko.com/reference/coins-markets) are not querying these removed categories. Please update any code or documentation referencing these categories to prevent errors.
 
+<GreenSeparator />
+
   ## Extended Historical Data for Onchain OHLCV Endpoint
 
   🗓️ **January 15, 2025**
-
 
   ### What's New?
 
@@ -1315,7 +1271,7 @@ description: "Product updates and announcements"
 
   * **Previous Behavior:** Users could only query data for the past 6 months from today.
   * **New Behavior**: Users can now access data from September 2021 to the present, depending on the pool's tracking start date on GeckoTerminal.
-  * Each API request is **limited to a 6-month date range**, but users can query older data by using the before\_timestamp parameter.
+  * Each API request is **limited to a 6-month date range**, but users can query older data by using the before_timestamp parameter.
 
   Note: access to data beyond the past 6 months is only available to [Paid Plan](https://www.coingecko.com/en/api/pricing) subscribers (Analyst plan & above).
 
@@ -1323,10 +1279,11 @@ description: "Product updates and announcements"
 
   No changes are required for existing integrations. However, users who need data beyond the past 6 months should adjust their queries to use the `before_timestamp` parameter to fetch additional data.
 
+<GreenSeparator />
+
   ## Update to Total Supply of POW Coins
 
   🗓️ **January 15, 2025**
-
 
   #### What's Changing?
 
@@ -1342,7 +1299,7 @@ description: "Product updates and announcements"
 
   This update will also affect historical Total Supply data for consistency. This change applies to all affected PoW coins, including Bitcoin, Bitcoin Cash, Litecoin, Ethereum Classic, and more.
 
-  #### Affected endpoints that contain "total\_supply" data:
+  #### Affected endpoints that contain "total_supply" data:
 
   * **Current Data**
     * [Coin Data by ID](https://docs.coingecko.com/reference/coins-id)
@@ -1400,20 +1357,21 @@ description: "Product updates and announcements"
   * [uPlexa](https://www.coingecko.com/en/coins/uplexa)
   * [WorldCoin (WDC)](https://www.coingecko.com/en/coins/worldcoin-wdc)
 
+<GreenSeparator />
+
   ## Improved Update Frequency for selected Pro-API endpoints
 
   🗓️ **January 13, 2025**
 
-
-  \[Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
+  [Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
 
   The edge cache duration for the following endpoints are now reduced to 20-30s, allowing you to retrieve updated data more frequently.
 
   | Endpoints                                                                                                 | Previous Update Frequency | Current Update Frequency |
   | :-------------------------------------------------------------------------------------------------------- | :------------------------ | :----------------------- |
   | CoinGecko [/simple/price](https://docs.coingecko.com/reference/simple-price)                              | 30s                       | 20s                      |
-  | CoinGecko [/simple/token\_price](https://docs.coingecko.com/reference/simple-token-price)                 | 30s                       | 20s                      |
-  | Onchain [/simple/networks/../token\_price](https://docs.coingecko.com/reference/onchain-simple-price)     | 60s                       | 30s                      |
+  | CoinGecko [/simple/token_price](https://docs.coingecko.com/reference/simple-token-price)                 | 30s                       | 20s                      |
+  | Onchain [/simple/networks/../token_price](https://docs.coingecko.com/reference/onchain-simple-price)     | 60s                       | 30s                      |
   | Onchain [/networks/../pools/../trades](https://docs.coingecko.com/reference/pool-trades-contract-address) | 60s                       | 30s                      |
   | Onchain [/networks/../pools/..](https://docs.coingecko.com/reference/pool-address)                        | 60s                       | 30s                      |
   | Onchain [/networks/../pools/multi/..](https://docs.coingecko.com/reference/pools-addresses)               | 60s                       | 30s                      |
@@ -1432,10 +1390,11 @@ description: "Product updates and announcements"
 
   **CoinGecko API Team**
 
+<GreenSeparator />
+
   ## Improved 5-minutely data for Historical Chart Data endpoints
 
   🗓️ **January 09, 2025**
-
 
   For the following 4 historical chart endpoints, the data of the *last 48 hours from now* is no longer excluded. 
 
@@ -1465,7 +1424,6 @@ description: "Product updates and announcements"
   ## Added: Onchain Categories Data, CG data improvements
 
   🗓️ **December 24, 2024**
-
 
   ### NEW: Onchain Categories : Get Categories on GeckoTerminal.com
 
@@ -1503,7 +1461,7 @@ description: "Product updates and announcements"
 
   ### Onchain New Pools Data: Bug Fixed
 
-  Previously, this [/networks/new\_pools](https://docs.coingecko.com/reference/latest-pools-network) endpoint omitted new pools that are created within the last 24 hours. 
+  Previously, this [/networks/new_pools](https://docs.coingecko.com/reference/latest-pools-network) endpoint omitted new pools that are created within the last 24 hours. 
 
   It now returns all newly created pools in the last 48 hours. 
 
@@ -1543,10 +1501,11 @@ description: "Product updates and announcements"
 
   Previously, the last completed UTC day (00:00) was only made available **35 minutes** after midnight.
 
+<GreenSeparator />
+
   ## [Updated: Q4 2024] CoinGecko Asset Issuance Standardisation Initiative Updates
 
   🗓️ **December 17, 2024**
-
 
   As part of our commitment to improving data quality and enhancing the consistency of asset information, we are rolling out an asset standardization initiative at CoinGecko.
 
@@ -1586,34 +1545,34 @@ description: "Product updates and announcements"
   **Simple**
 
   * /simple/price
-  * /simple/token\_price/\{id}
+  * /simple/token_price/{id}
 
   **Coins**
 
   * /coins/markets
-  * /coins/\{id}
-  * /coins/\{id}/tickers
-  * /coins/\{id}/history
-  * /coins/\{id}/market\_chart
-  * /coins/\{id}/market\_chart/range
-  * /coins/\{id}/ohlc
-  * /coins/\{id}/ohlc/range
-  * /coins/\{id}/circulating\_supply\_chart
-  * /coins/\{id}/circulating\_supply\_chart/range
-  * /coins/\{id}/total\_supply\_chart
-  * /coins/\{id}/total\_supply\_chart/range
+  * /coins/{id}
+  * /coins/{id}/tickers
+  * /coins/{id}/history
+  * /coins/{id}/market_chart
+  * /coins/{id}/market_chart/range
+  * /coins/{id}/ohlc
+  * /coins/{id}/ohlc/range
+  * /coins/{id}/circulating_supply_chart
+  * /coins/{id}/circulating_supply_chart/range
+  * /coins/{id}/total_supply_chart
+  * /coins/{id}/total_supply_chart/range
 
   **Contract**
 
-  * /coins/\{id}/contract/\{contract\_address}
-  * /coins/\{id}/contract/\{contract\_address}/market\_chart
-  * /coins/\{id}/contract/\{contract\_address}/market\_chart/range
+  * /coins/{id}/contract/{contract_address}
+  * /coins/{id}/contract/{contract_address}/market_chart
+  * /coins/{id}/contract/{contract_address}/market_chart/range
 
   **Exchange**
 
-  * /exchanges/\{id}/tickers
-  * /exchanges/\{id}/volume\_chart
-  * /exchanges/\{id}/volume\_chart/range
+  * /exchanges/{id}/tickers
+  * /exchanges/{id}/volume_chart
+  * /exchanges/{id}/volume_chart/range
 
   #### **2. Do I have to make changes to my API?**
 
@@ -1635,12 +1594,13 @@ description: "Product updates and announcements"
 
   Then you may use [/coins/market endpoint](/reference/coins-markets) to retrieve the list of coins
 
+<GreenSeparator />
+
   ## Enhancing Your Access to Even Fresher Data!
 
   🗓️ **December 16, 2024**
 
-
-  \[Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
+  [Changes below are applicable to Analyst/Lite/Pro/Enterprise [plan subscribers](https://www.coingecko.com/en/api/pricing) only.]
 
   **Dear CoinGecko API paid plan subscribers,**
 
@@ -1649,8 +1609,8 @@ description: "Product updates and announcements"
   | Endpoints                                                                                                 | Current Update Frequency | New Update Frequency |
   | :-------------------------------------------------------------------------------------------------------- | :----------------------- | :------------------- |
   | CoinGecko [/simple/price](https://docs.coingecko.com/reference/simple-price)                              | 30s                      | 20s                  |
-  | CoinGecko [/simple/token\_price](https://docs.coingecko.com/reference/simple-token-price)                 | 30s                      | 20s                  |
-  | Onchain [/simple/networks/../token\_price](https://docs.coingecko.com/reference/onchain-simple-price)     | 60s                      | 30s                  |
+  | CoinGecko [/simple/token_price](https://docs.coingecko.com/reference/simple-token-price)                 | 30s                      | 20s                  |
+  | Onchain [/simple/networks/../token_price](https://docs.coingecko.com/reference/onchain-simple-price)     | 60s                      | 30s                  |
   | Onchain [/networks/../pools/../trades](https://docs.coingecko.com/reference/pool-trades-contract-address) | 60s                      | 30s                  |
   | Onchain [/networks/../pools/..](https://docs.coingecko.com/reference/pool-address)                        | 60s                      | 30s                  |
   | Onchain [/networks/../pools/multi/..](https://docs.coingecko.com/reference/pools-addresses)               | 60s                      | 30s                  |
@@ -1669,10 +1629,11 @@ description: "Product updates and announcements"
 
   **CoinGecko API Team**
 
+<GreenSeparator />
+
   ## Multiple Improvements: Onchain Trending Pools, CG New Currencies Support, Snapshot, Exchange Info
 
   🗓️ **December 15, 2024**
-
 
   ### Onchain Trending Pools: Added Support to Filter by Duration
 
@@ -1729,7 +1690,6 @@ description: "Product updates and announcements"
 
   🗓️ **October 09, 2024**
 
-
   ### Onchain: Simple Price - Increased Token Address Limit from 30 to 100
 
   [Token Price by Token Addresses](/reference/onchain-simple-price) now allows to input up to 100 contract addresses, instead of 30. 
@@ -1766,7 +1726,6 @@ description: "Product updates and announcements"
   ## Multiple Improvements: Global Market Chart, Asset Platforms, Coin Categories, Historical Supply Chart
 
   🗓️ **September 26, 2024**
-
 
   ### Global Market Chart - Improved Daily Data Update
 
@@ -1811,15 +1770,16 @@ description: "Product updates and announcements"
   3. [👑 Total Supply Chart by ID](https://docs.coingecko.com/reference/coins-id-total-supply-chart)
   4. [👑 Total Supply Chart within time range by ID](https://docs.coingecko.com/reference/coins-id-total-supply-chart-range)
 
+<GreenSeparator />
+
   ## Improvement of update frequency for OHLC endpoints
 
   🗓️ **September 04, 2024**
 
-
   The cache & update frequency of the following endpoints have been improved from every 30 minutes to every 15 minutes:
 
-  * [/coins/\{id}/ohlc](/reference/coins-id-ohlc)
-  * [/coins/\{id}/ohlc/range](/reference/coins-id-ohlc-range)
+  * [/coins/{id}/ohlc](/reference/coins-id-ohlc)
+  * [/coins/{id}/ohlc/range](/reference/coins-id-ohlc-range)
 
 </Update>
 
@@ -1828,11 +1788,10 @@ description: "Product updates and announcements"
 
   🗓️ **August 18, 2024**
 
+  We've added  'user_favorites_count', and 'ath' (all-time-high) related data to the following NFT endpoints:
 
-  We've added  'user\_favorites\_count', and 'ath' (all-time-high) related data to the following NFT endpoints:
-
-  * [/nfts/\{id}](/reference/nfts-id)
-  * [/nfts/\{asset\_platform\_id}/contract/\{contract\_address}](/reference/nfts-contract-address)
+  * [/nfts/{id}](/reference/nfts-id)
+  * [/nfts/{asset_platform_id}/contract/{contract_address}](/reference/nfts-contract-address)
 
   **Example of responses:**
 
@@ -1860,19 +1819,19 @@ description: "Product updates and announcements"
 
   🗓️ **May 10, 2024**
 
-
-  We've introduced a new endpoint [/coins/\{id}/ohlc/range](/reference/coins-id-ohlc-range).
+  We've introduced a new endpoint [/coins/{id}/ohlc/range](/reference/coins-id-ohlc-range).
 
   This endpoint allows you to get the OHLC chart (Open, High, Low, Close) of a coin within a range of timestamp based on particular coin id.
 
   Please note that this endpoint is available exclusively for **paid plan subscribers only**.
 
+<GreenSeparator />
+
   ## Added interval hourly params to /coins/{id}/ohlc
 
   🗓️ **May 04, 2024**
 
-
-  We've expanded functionality to include support for the `interval=hourly` parameter within the [/coins/\{id}/ohlc](/reference/coins-id-ohlc) endpoint.
+  We've expanded functionality to include support for the `interval=hourly` parameter within the [/coins/{id}/ohlc](/reference/coins-id-ohlc) endpoint.
 
   Users can use this parameter to retrieve OHLC (Open/High/Low/Close) data on a hourly interval for up to 90 days of the date range.
 
@@ -1887,7 +1846,6 @@ description: "Product updates and announcements"
 
   🗓️ **April 30, 2024**
 
-
   We've now enhanced the [/coins/list](/reference/coins-list) endpoint to include inactive coins
 
   * You may access the inactive coins by specifying `status=inactive` in your query
@@ -1896,11 +1854,11 @@ description: "Product updates and announcements"
 
   Additionally, historical data for inactive coins can be queried using their IDs in the following endpoints:
 
-  * [/coins/\{id}/history](/reference/coins-id-history)
-  * [/coins/\{id}/market\_chart](/reference/coins-id-market-chart)
-  * [/coins/\{id}/market\_chart/range](/reference/coins-id-market-chart-range)
-  * [/coins/\{id}/contract/\{contract\_address}/market\_chart](/reference/contract-address-market-chart)
-  * [/coins/\{id}/contract/\{contract\_address}/market\_chart/range](/reference/contract-address-market-chart-range)
+  * [/coins/{id}/history](/reference/coins-id-history)
+  * [/coins/{id}/market_chart](/reference/coins-id-market-chart)
+  * [/coins/{id}/market_chart/range](/reference/coins-id-market-chart-range)
+  * [/coins/{id}/contract/{contract_address}/market_chart](/reference/contract-address-market-chart)
+  * [/coins/{id}/contract/{contract_address}/market_chart/range](/reference/contract-address-market-chart-range)
 
   Please note that these features are available exclusively for **paid plan subscribers only**
 
@@ -1910,7 +1868,6 @@ description: "Product updates and announcements"
   ## Introduced /key endpoint
 
   🗓️ **March 27, 2024**
-
 
   We've introduced a new endpoint [/key](/reference/api-usage) for conveniently monitoring your account's API usage, including rate limits and remaining credits.
 
@@ -1933,8 +1890,7 @@ description: "Product updates and announcements"
 
   🗓️ **February 28, 2024**
 
-
-  * image\_url is now returned in the token response for pools and tokens endpoints:
+  * image_url is now returned in the token response for pools and tokens endpoints:
 
     Example of responses:
 
@@ -1985,17 +1941,19 @@ description: "Product updates and announcements"
     }
     ```
 
+<GreenSeparator />
+
   ## Introduced /networks/{network}/trending_pools endpoint (Onchain/GT)
 
   🗓️ **February 19, 2024**
 
+  Trending Pools endpoint, [/networks/{network}/trending_pools](/reference/trending-pools-network) is now available to fetch a list of pools that are trending as seen on GeckoTerminal based on web visits and on-chain activities.
 
-  Trending Pools endpoint, [/networks/\{network}/trending\_pools](/reference/trending-pools-network) is now available to fetch a list of pools that are trending as seen on GeckoTerminal based on web visits and on-chain activities.
+<GreenSeparator />
 
   ## Introduced /search/pools endpoint (Onchain/GT)
 
   🗓️ **February 19, 2024**
-
 
   Added new endpoint to search for pools /search/pools based on keywords passed into query.
 
@@ -2006,8 +1964,7 @@ description: "Product updates and announcements"
 
   🗓️ **January 18, 2024**
 
-
-  We've included a new field "whitepaper" under "links" section for [/coins/\{id}](/reference/coins-id) endpoint 
+  We've included a new field "whitepaper" under "links" section for [/coins/{id}](/reference/coins-id) endpoint 
 
   **Example of responses:**
 
@@ -2040,42 +1997,44 @@ description: "Product updates and announcements"
 
   🗓️ **December 13, 2023**
 
+  The following data is now deprecated for [/coins/{id}](/reference/coins-id) endpoint:
 
-  The following data is now deprecated for [/coins/\{id}](/reference/coins-id) endpoint:
+  * coingecko_rank
+  * coingecko_score
+  * developer_score
+  * community_score
+  * liquidity_score
+  * public_interest_score
+  * public_interest_stats
+  * alexa_rank
+  * bing_matches
 
-  * coingecko\_rank
-  * coingecko\_score
-  * developer\_score
-  * community\_score
-  * liquidity\_score
-  * public\_interest\_score
-  * public\_interest\_stats
-  * alexa\_rank
-  * bing\_matches
+<GreenSeparator />
 
   ## Introduced new historical total supply endpoints
 
   🗓️ **December 12, 2023**
 
-
   We've introduced Historical Total Supply data to Enterprise plan subscribers via these 2 exclusive endpoints:
 
-  * [/coins/\{id}/total\_supply\_chart](/reference/coins-id-total-supply-chart) : get historical total supply of a coin, by number of days away from now.
-  * [/coins/\{id}/total\_supply\_chart/range](/reference/coins-id-total-supply-chart-range) : get historical total supply of a coin, within a range of timestamp.
+  * [/coins/{id}/total_supply_chart](/reference/coins-id-total-supply-chart) : get historical total supply of a coin, by number of days away from now.
+  * [/coins/{id}/total_supply_chart/range](/reference/coins-id-total-supply-chart-range) : get historical total supply of a coin, within a range of timestamp.
+
+<GreenSeparator />
 
   ## Included more trending coins
 
   🗓️ **December 07, 2023**
 
-
   We've expanded the capabilities of the [/search/trending](/reference/trending-search) endpoint. 
 
   It now supports up to 15 trending coins, a significant increase from the previous limit of 7.
 
+<GreenSeparator />
+
   ## Improvement on pool data (Onchain/GT)
 
   🗓️ **December 03, 2023**
-
 
   Pool data now returns transaction stats for the last 1 hour. Unique buyers and sellers in the last 1 hour and 24 hours are now returned in the response
 
@@ -2086,13 +2045,12 @@ description: "Product updates and announcements"
 
   🗓️ **November 21, 2023**
 
+  The web_slug data is now available in the following endpoints.
 
-  The web\_slug data is now available in the following endpoints.
+  * [/coins/{id}](/reference/coins-id)
+  * [/coins/{contract}/contract/{contract_address}](/reference/coins-contract-address)
 
-  * [/coins/\{id}](/reference/coins-id)
-  * [/coins/\{contract}/contract/\{contract\_address}](/reference/coins-contract-address)
-
-  This addition allows users to accurately link to a CoinGecko coin page using [www.coingecko.com/en/\{web\_slug}](http://www.coingecko.com/en/\{web_slug}).
+  This addition allows users to accurately link to a CoinGecko coin page using [www.coingecko.com/en/{web_slug}](http://www.coingecko.com/en/{web_slug}).
 
   **Example of responses:**
 
@@ -2107,7 +2065,7 @@ description: "Product updates and announcements"
   }
   ```
 
-  For the [/asset\_platforms](/reference/asset-platforms-list) endpoint, we've introduced the native\_coin\_id data. This enables users to obtain the coin ID of different blockchain networks or asset platforms that may not have a contract address to look up
+  For the [/asset_platforms](/reference/asset-platforms-list) endpoint, we've introduced the native_coin_id data. This enables users to obtain the coin ID of different blockchain networks or asset platforms that may not have a contract address to look up
 
   **Example of responses:**
 
@@ -2121,19 +2079,21 @@ description: "Product updates and announcements"
   },
   ```
 
+<GreenSeparator />
+
   ## Introduced /simple/networks/{network}/token_price/{addresses} endpoint (Onchain/GT)
 
   🗓️ **November 10, 2023**
 
+  Inspired by CoinGecko API most popular endpoint, we have launched the [/simple/networks/{network}/token_price/{addresses}](/reference/onchain-simple-price), simple endpoint. Simply pass in addresses of any tokens on supported blockchain and get price data for it
 
-  Inspired by CoinGecko API most popular endpoint, we have launched the [/simple/networks/\{network}/token\_price/\{addresses}](/reference/onchain-simple-price), simple endpoint. Simply pass in addresses of any tokens on supported blockchain and get price data for it
+<GreenSeparator />
 
   ## Introduced /networks/{network}/pools/{pool_address}/trades endpoint (Onchain/GT)
 
   🗓️ **November 08, 2023**
 
-
-  You can now get the latest 300 trades in the past 24 hours of a given pool from this endpoint [/networks/\{network}/pools/\{pool\_address}/trades](/reference/pool-trades-contract-address). You may optionally filter by trade size as well. You can now build your own telegram bot alert!
+  You can now get the latest 300 trades in the past 24 hours of a given pool from this endpoint [/networks/{network}/pools/{pool_address}/trades](/reference/pool-trades-contract-address). You may optionally filter by trade size as well. You can now build your own telegram bot alert!
 
 </Update>
 
@@ -2142,12 +2102,11 @@ description: "Product updates and announcements"
 
   🗓️ **October 23, 2023**
 
-
   You can now fetch token information such as name, image, social links, and description via these endpoints:
 
-  * To fetch information of tokens inside a pool, use [/networks/\{network}/pools/\{pool\_address}/info](/reference/pool-token-info-contract-address)
-  * To fetch information of a specific token use [/networks/\{network}/tokens/\{address}/info](/reference/token-info-contract-address)
-  * If you like to get token information of the most recently updated tokens, use [/tokens/info\_recently\_updated](/reference/tokens-info-recent-updated)
+  * To fetch information of tokens inside a pool, use [/networks/{network}/pools/{pool_address}/info](/reference/pool-token-info-contract-address)
+  * To fetch information of a specific token use [/networks/{network}/tokens/{address}/info](/reference/token-info-contract-address)
+  * If you like to get token information of the most recently updated tokens, use [/tokens/info_recently_updated](/reference/tokens-info-recent-updated)
 
 </Update>
 
@@ -2156,15 +2115,15 @@ description: "Product updates and announcements"
 
   🗓️ **September 11, 2023**
 
+  Pool response data now returns price in the base and quote token of the pool base_token_price_quote_token and quote_token_price_base_token for your convenience without the need to do additional calculation to derive these values
 
-  Pool response data now returns price in the base and quote token of the pool base\_token\_price\_quote\_token and quote\_token\_price\_base\_token for your convenience without the need to do additional calculation to derive these values
+<GreenSeparator />
 
   ## Introduced new endpoints (Onchain/GT)
 
   🗓️ **September 06, 2023**
 
-
-  Added new endpoints to allow querying multiple pools and tokens in a single API call. /networks/\{network}/pools/multi/\{addresses} and /networks/\{network}/tokens/multi/\{addresses}
+  Added new endpoints to allow querying multiple pools and tokens in a single API call. /networks/{network}/pools/multi/{addresses} and /networks/{network}/tokens/multi/{addresses}
 
 </Update>
 
@@ -2173,35 +2132,36 @@ description: "Product updates and announcements"
 
   🗓️ **June 23, 2023**
 
-
   * More data added to the Pool response such as FDV, market cap (from CoinGecko if available), price change percentage, volume, number of buy/sell transactions
   * More data added when querying for token such as FDV, volume, market cap, and the top 3 pools
+
+<GreenSeparator />
 
   ## Introduced precision params for other endpoints
 
   🗓️ **June 15, 2023**
 
-
-  The uses of 'precision' parameter allows to specify price data in full or 0-18 decimals, and previously was only made available for [/simple/price](/reference/simple-price) and [/simple/token\_price/\{id}](/reference/simple-token-price) endpoints. 
+  The uses of 'precision' parameter allows to specify price data in full or 0-18 decimals, and previously was only made available for [/simple/price](/reference/simple-price) and [/simple/token_price/{id}](/reference/simple-token-price) endpoints. 
 
   This parameter is now supported for more endpoints as listed below:
 
   * [/coins/markets](/reference/coins-markets)
-  * [/coins/market\_chart](/reference/coins-market-chart)
-  * [/coins/\{id}market\_chart/range](/reference/coins-id-market-chart)
-  * [/coins/\{id}/contract/\{contract\_address}/market\_chart](/reference/contract-address-market-chart)
-  * [/coins/\{id}/contract/\{contract\_address}/market\_chart/range](/reference/contract-address-market-chart-range)
-  * [/coins/\{id}/ohlc](/reference/coins-id-ohlc)
+  * [/coins/market_chart](/reference/coins-market-chart)
+  * [/coins/{id}market_chart/range](/reference/coins-id-market-chart)
+  * [/coins/{id}/contract/{contract_address}/market_chart](/reference/contract-address-market-chart)
+  * [/coins/{id}/contract/{contract_address}/market_chart/range](/reference/contract-address-market-chart-range)
+  * [/coins/{id}/ohlc](/reference/coins-id-ohlc)
+
+<GreenSeparator />
 
   ## Multiple Improvements
 
   🗓️ **June 01, 2023**
 
-
-  We've made enhancements to the /search/trending and /coins/\{asset\_platform\_id}/contract/\{contract\_address} endpoints:
+  We've made enhancements to the /search/trending and /coins/{asset_platform_id}/contract/{contract_address} endpoints:
 
   * Top 5 trending NFT data (based on high trading volume in the last 24 hours) is now included in the [/search/trending](/reference/trending-search) endpoint
-  * Near Protocol contract address (e.g. wrap.near) is now supported for [/coins/\{asset\_platform\_id}/contract/\{contract\_address} ](/reference/coins-contract-address) endpoint
+  * Near Protocol contract address (e.g. wrap.near) is now supported for [/coins/{asset_platform_id}/contract/{contract_address} ](/reference/coins-contract-address) endpoint
 
 </Update>
 
@@ -2210,16 +2170,16 @@ description: "Product updates and announcements"
 
   🗓️ **May 28, 2023**
 
-
-  * Token metadata such as name, symbol, and CoinGecko ID are now returned in the responses for pools endpoints. Users will need to pass in this attribute include=base\_token, quote\_token
+  * Token metadata such as name, symbol, and CoinGecko ID are now returned in the responses for pools endpoints. Users will need to pass in this attribute include=base_token, quote_token
   * CoinGecko asset platform ID added to the response for [/networks](/reference/networks-list) endpoint
+
+<GreenSeparator />
 
   ## Added interval daily params to /coins/{id}/ohlc
 
   🗓️ **May 22, 2023**
 
-
-  The [/coins/\{id}/ohlc](/reference/coins-id-ohlc) endpoint now supports the "interval=daily" parameter for Paid Plan Subscribers
+  The [/coins/{id}/ohlc](/reference/coins-id-ohlc) endpoint now supports the "interval=daily" parameter for Paid Plan Subscribers
 
   Users can use this parameter to retrieve OHLC (Open/High/Low/Close) data on a daily interval for up to 180 days of date range.
 
@@ -2230,8 +2190,7 @@ description: "Product updates and announcements"
 
   🗓️ **April 26, 2023**
 
-
-  We've added  'watchlist\_portfolio\_users' field to [/coins/\{id}](/reference/coins-id) endpoint responses. 
+  We've added  'watchlist_portfolio_users' field to [/coins/{id}](/reference/coins-id) endpoint responses. 
 
   This refers to number of users who added the coin into a watchlist or portfolio.
 
@@ -2248,23 +2207,25 @@ description: "Product updates and announcements"
   }
   ```
 
+<GreenSeparator />
+
   ## Increased Rate Limit (Onchain/GT)
 
   🗓️ **April 19, 2023**
 
-
   We've increased the rate limit of Public Plan from 10 calls per minute to 30 calls per minute
+
+<GreenSeparator />
 
   ## Multiple Improvements (Onchain/GT)
 
   🗓️ **April 18, 2023**
 
+  * base_token_native_currency and quote_token_native_currency added to the pools endpoint response. This allows you to obtain price in the network's native currency in addition to in USD
+  * reserve_in_usd added to the pools endpoint response. This returns the total liquidity/reserve of the pool in USD
+  * pool_created_at added to the pools endpoint response
 
-  * base\_token\_native\_currency and quote\_token\_native\_currency added to the pools endpoint response. This allows you to obtain price in the network's native currency in addition to in USD
-  * reserve\_in\_usd added to the pools endpoint response. This returns the total liquidity/reserve of the pool in USD
-  * pool\_created\_at added to the pools endpoint response
-
-  Example of responses for [/networks/\{network}/pools/\{address}](/reference/pool-address) :
+  Example of responses for [/networks/{network}/pools/{address}](/reference/pool-address) :
 
   ```json
   {
@@ -2296,19 +2257,20 @@ description: "Product updates and announcements"
   }
   ```
 
-  * [/networks/\{network}/new\_pools](/reference/latest-pools-network) endpoint added to query new pools discovered for a network
-  * [/networks/new\_pools](/reference/latest-pools-list) endpoint added to query new pools discovered across all networks
+  * [/networks/{network}/new_pools](/reference/latest-pools-network) endpoint added to query new pools discovered for a network
+  * [/networks/new_pools](/reference/latest-pools-list) endpoint added to query new pools discovered across all networks
+
+<GreenSeparator />
 
   ## Included new fields
 
   🗓️ **April 03, 2023**
 
-
   We've added "symbol" field to these NFT endpoints responses:
 
   * [/nfts/markets](/reference/nfts-markets)
-  * [/nfts/\{id} ](/reference/nfts-id)
-  * [/nfts/\{assets\_platform}/contract/\{contract\_address}](/reference/nfts-contract-address)
+  * [/nfts/{id} ](/reference/nfts-id)
+  * [/nfts/{assets_platform}/contract/{contract_address}](/reference/nfts-contract-address)
 
   **Example of responses:**
 
@@ -2330,11 +2292,10 @@ description: "Product updates and announcements"
 
   🗓️ **March 27, 2023**
 
-
   We've added "links" field (e.g. homepage, twitter, discord) to these NFT endpoints responses: 
 
-  * [/nfts/\{id}](/reference/nfts-id)
-  * [/nfts/\{asset\_platform}/contract/\{contract\_address}](/reference/nfts-contract-address)
+  * [/nfts/{id}](/reference/nfts-id)
+  * [/nfts/{asset_platform}/contract/{contract_address}](/reference/nfts-contract-address)
 
   **Example of responses:**
 
@@ -2352,21 +2313,23 @@ description: "Product updates and announcements"
   }
   ```
 
+<GreenSeparator />
+
   ## Introduced /coins/top_gainer_losers endpoint
 
   🗓️ **March 23, 2023**
 
-
-  We've added [/coins/top\_gainers\_losers](/reference/coins-top-gainers-losers) endpoint exclusively for Paid Plan Subscribers. 
+  We've added [/coins/top_gainers_losers](/reference/coins-top-gainers-losers) endpoint exclusively for Paid Plan Subscribers. 
 
   Users can now get the top 30 coins with largest price gain and loss by a specific time duration with this endpoint.
+
+<GreenSeparator />
 
   ## Improved OHLCV endpoint (Onchain/GT)
 
   🗓️ **March 23, 2023**
 
-
-  [/networks/\{network}/pools/\{pool\_address}/ohlcv/\{timeframe}](/reference/pool-ohlcv-contract-address) now returns more granularity `day,` `hour`, `minute` and multiple aggregates
+  [/networks/{network}/pools/{pool_address}/ohlcv/{timeframe}](/reference/pool-ohlcv-contract-address) now returns more granularity `day,` `hour`, `minute` and multiple aggregates
 
 </Update>
 
@@ -2375,18 +2338,18 @@ description: "Product updates and announcements"
 
   🗓️ **February 23, 2023**
 
-
-  We've made some updates to the /coins/categories and /simple/token\_price/\{id} endpoints:
+  We've made some updates to the /coins/categories and /simple/token_price/{id} endpoints:
 
   * Market cap and volume data for 'ecosystem' categories in the [/coins/categories](/reference/coins-categories) endpoint will now return 'null' until further notice. The CoinGecko team is actively working on improvements to provide more accurate data. If you have any feedback or suggestions, please reach out via [api@coingecko.com](mailto:api@coingecko.com).
-  * Previously, the [/simple/token\_price/\{id}](/reference/simple-token-price) endpoint was unable to return data for some Solana coins. This issue has been resolved, and users can now expect accurate data for Solana coins from this endpoint.
+  * Previously, the [/simple/token_price/{id}](/reference/simple-token-price) endpoint was unable to return data for some Solana coins. This issue has been resolved, and users can now expect accurate data for Solana coins from this endpoint.
+
+<GreenSeparator />
 
   ## Introduced /exchange/{id}/volume_chart/range endpoint
 
   🗓️ **February 15, 2023**
 
-
-  We've introduced the [/exchange/\{id}/volume\_chart/range](/reference/exchanges-id-volume-chart-range) endpoint for Paid Plan Subscribers.
+  We've introduced the [/exchange/{id}/volume_chart/range](/reference/exchanges-id-volume-chart-range) endpoint for Paid Plan Subscribers.
 
   This exclusive feature allows users to query full historical volume data of an exchange.
 
@@ -2396,7 +2359,6 @@ description: "Product updates and announcements"
   ## Introduced /coins/list/new endpoint
 
   🗓️ **January 09, 2023**
-
 
   We've introduced the [/coins/list/new](/reference/coins-list-new) endpoint for Paid Plan Subscribers.
 
@@ -2409,12 +2371,11 @@ description: "Product updates and announcements"
 
   🗓️ **December 15, 2022**
 
-
   We've added exclusive NFTs beta endpoints for Paid Plan Subscribers. These endpoints include:
 
-  * [/nfts/\{id}/market\_chart](/reference/nfts-id-market-chart) (for historical market data)
-  * [/nfts/\{contract\_address}/market\_chart](/reference/nfts-contract-address-market-chart) (for historical market data based on contract address)
-  * [/nfts/\{id}/tickers](/reference/nfts-id-tickers) (to retrieve floor price and volume information on each marketplace)
+  * [/nfts/{id}/market_chart](/reference/nfts-id-market-chart) (for historical market data)
+  * [/nfts/{contract_address}/market_chart](/reference/nfts-contract-address-market-chart) (for historical market data based on contract address)
+  * [/nfts/{id}/tickers](/reference/nfts-id-tickers) (to retrieve floor price and volume information on each marketplace)
 
 </Update>
 
@@ -2423,10 +2384,9 @@ description: "Product updates and announcements"
 
   🗓️ **October 25, 2022**
 
+  We've added new [/global/market_cap_chart](/reference/global-market-cap-chart) endpoint for Paid Plan Subscribers. This allows users to query historical market cap chart data. 
 
-  We've added new [/global/market\_cap\_chart](/reference/global-market-cap-chart) endpoint for Paid Plan Subscribers. This allows users to query historical market cap chart data. 
-
-  We've introduced a filter param, currently limited to "nft," to the [/asset\_platforms](/reference/asset-platforms-list) endpoint. This allows users to obtain a comprehensive list of NFT blockchain networks supported by CoinGecko.
+  We've introduced a filter param, currently limited to "nft," to the [/asset_platforms](/reference/asset-platforms-list) endpoint. This allows users to obtain a comprehensive list of NFT blockchain networks supported by CoinGecko.
 
   A new parameter, "precision," has been added to the [/simple/price](/reference/simple-price) endpoint. This enhancement allows users to customize the returned coin price based on the specified number of decimals or retrieve it with full decimal precision.
 
@@ -2437,26 +2397,26 @@ description: "Product updates and announcements"
 
   🗓️ **September 29, 2022**
 
-
   We've introduced beta endpoints for NFTs:
 
   * [/nfts/list ](/reference/nfts-list)
-  * [/nfts/\{id}](/reference/nfts-id)
-  * [/nfts/\{asset\_platform\_id}/contract/\{contract\_address}](/reference/nfts-contract-address)
+  * [/nfts/{id}](/reference/nfts-id)
+  * [/nfts/{asset_platform_id}/contract/{contract_address}](/reference/nfts-contract-address)
   * [/nfts/market ](/reference/nfts-markets) (Exclusive for Enterprise Plan Subscribers)
 
   Furthermore we've introduced the Token Lists endpoint for Enterprise Plan Subscribers
 
-  * [/token\_lists/\{asset\_platform\_id}/all.json](/reference/token-lists)
+  * [/token_lists/{asset_platform_id}/all.json](/reference/token-lists)
+
+<GreenSeparator />
 
   ## Included new fields to multiple endpoints
 
   🗓️ **September 06, 2022**
 
+  We have added a new field, "details_platform," to the [/coins/{id}](/reference/coins-id) and [/coins/{asset_platform_id}/contract/{contract_address}](/reference/coins-contract-address) endpoints responses. 
 
-  We have added a new field, "details\_platform," to the [/coins/\{id}](/reference/coins-id) and [/coins/\{asset\_platform\_id}/contract/\{contract\_address}](/reference/coins-contract-address) endpoints responses. 
-
-  The field contains information about the asset platform, specifically the "decimal\_places," providing details on the decimal places associated with the asset platform. 
+  The field contains information about the asset platform, specifically the "decimal_places," providing details on the decimal places associated with the asset platform. 
 
   **Example of responses:**
 
@@ -2486,11 +2446,10 @@ description: "Product updates and announcements"
 
   🗓️ **February 21, 2022**
 
-
   We've introduced the Historical Circulating Supply endpoint exclusively for Enterprise plan subscribers. 
 
-  * [/coins/\{id}/circulating\_supply\_chart](/reference/coins-id-circulating-supply-chart)
-  * [/coins/\{id}/circulating\_supply\_chart/range](/reference/coins-id-circulating-supply-chart-range)
+  * [/coins/{id}/circulating_supply_chart](/reference/coins-id-circulating-supply-chart)
+  * [/coins/{id}/circulating_supply_chart/range](/reference/coins-id-circulating-supply-chart-range)
 
   These endpoints provide access to historical circulating supply data of a specific coin.
 
@@ -2501,15 +2460,15 @@ description: "Product updates and announcements"
 
   🗓️ **September 07, 2020**
 
-
   Event endpoint deprecated
+
+<GreenSeparator />
 
   ## Included new fields to /exchanges/{id}
 
   🗓️ **September 07, 2020**
 
-
-  We've enhanced the [/exchanges/\{id}](/reference/exchanges-id) endpoint by adding two new fields, public\_notice and alert\_notice. 
+  We've enhanced the [/exchanges/{id}](/reference/exchanges-id) endpoint by adding two new fields, public_notice and alert_notice. 
 
   These additions provide information on public notices and alerts associated with the specified exchange.
 
@@ -2534,17 +2493,17 @@ description: "Product updates and announcements"
 
   🗓️ **August 03, 2020**
 
-
   We've introduced new [/search/trending](/reference/trending-search) endpoint.
 
   This addition allows users to access trending search data including coins on CoinGecko.
+
+<GreenSeparator />
 
   ## Introduced category filter params to /coins/markets
 
   🗓️ **August 03, 2020**
 
-
-  We've implemented a category filter, currently limited to "decentralized\_finance\_defi," for the [/coins/markets](/reference/coins-markets) endpoint. 
+  We've implemented a category filter, currently limited to "decentralized_finance_defi," for the [/coins/markets](/reference/coins-markets) endpoint. 
 
   This addition allows users to filter and retrieve market data specifically related to decentralized finance (DeFi) within the endpoint.
 
@@ -2555,8 +2514,7 @@ description: "Product updates and announcements"
 
   🗓️ **July 15, 2020**
 
-
-  We've introduced new [/coins/\{id}/ohlc](/reference/coins-id-ohlc) endpoint.
+  We've introduced new [/coins/{id}/ohlc](/reference/coins-id-ohlc) endpoint.
 
   This endpoint allows you to retrieve Open, High, Low, and Close (OHLC) data for a specific coin.
 
@@ -2567,8 +2525,7 @@ description: "Product updates and announcements"
 
   🗓️ **April 23, 2020**
 
-
-  We've introduced three new fields atl, atl\_change\_percentage, and atl\_date to the responses of [/coins/markets](/reference/coins-markets) endpoint. 
+  We've introduced three new fields atl, atl_change_percentage, and atl_date to the responses of [/coins/markets](/reference/coins-markets) endpoint. 
 
   These additions provide valuable data on the all-time low (atl) price, percentage change since the all-time low, and the date of the all-time low for improved analysis and insights. 
 
@@ -2600,12 +2557,11 @@ description: "Product updates and announcements"
 
   🗓️ **March 31, 2020**
 
+  Starting from April 14th, 2020, there's a crucial update to the[ /coins/{id}/tickers](/reference/coins-id-tickers) API endpoint. Previously, the converted_last value represented the converted price per coin in USD. Now, it will accurately reflect the market price of the base currency itself.
 
-  Starting from April 14th, 2020, there's a crucial update to the[ /coins/\{id}/tickers](/reference/coins-id-tickers) API endpoint. Previously, the converted\_last value represented the converted price per coin in USD. Now, it will accurately reflect the market price of the base currency itself.
+  For example, if querying coins/tether/tickers, and there's a BTC/USDT ticker pair, the old converted_last might show 6491.51 USD. After the update, it will return 1, representing the actual market price of Tether.
 
-  For example, if querying coins/tether/tickers, and there's a BTC/USDT ticker pair, the old converted\_last might show 6491.51 USD. After the update, it will return 1, representing the actual market price of Tether.
-
-  If you utilize converted\_last for calculations, be aware of potential breaking changes and take necessary actions. If it's solely for display, no action is required, as this update ensures a more accurate representation of the intended value.
+  If you utilize converted_last for calculations, be aware of potential breaking changes and take necessary actions. If it's solely for display, no action is required, as this update ensures a more accurate representation of the intended value.
 
   **Example of responses:**
 
@@ -2640,8 +2596,7 @@ description: "Product updates and announcements"
 
   🗓️ **January 09, 2020**
 
-
-  We have made updates to the `include_tickers` parameter for [/derivatives/exchanges/\{id} ](/reference/derivatives-exchanges-id)endpoint. 
+  We have made updates to the `include_tickers` parameter for [/derivatives/exchanges/{id} ](/reference/derivatives-exchanges-id)endpoint. 
 
   Please refer to the documentation for a comprehensive list of available values for this parameter
 
@@ -2651,7 +2606,6 @@ description: "Product updates and announcements"
   ## Introduced finance and derivatives endpoints
 
   🗓️ **November 08, 2019**
-
 
   We have introduced finance and derivatives endpoints to our API.
 
@@ -2664,8 +2618,7 @@ description: "Product updates and announcements"
 
   🗓️ **July 22, 2019**
 
-
-  We have added a new endpoint, [/exchanges/\{id}/volume\_chart](/reference/exchanges-id-volume-chart).
+  We have added a new endpoint, [/exchanges/{id}/volume_chart](/reference/exchanges-id-volume-chart).
 
   This endpoint is designed to provide volume chart data related to the specified exchange, with the information presented in BTC.
 
@@ -2692,23 +2645,23 @@ description: "Product updates and announcements"
 
   🗓️ **June 13, 2019**
 
+  We've implemented an enhancement to the [/coins/{id}/tickers](/reference/coins-id-tickers) and [/exchanges/{id}/tickers ](/reference/exchanges-id-tickers) endpoints. 
 
-  We've implemented an enhancement to the [/coins/\{id}/tickers](/reference/coins-id-tickers) and [/exchanges/\{id}/tickers ](/reference/exchanges-id-tickers) endpoints. 
-
-  Now, users have the flexibility to use the optional `order` parameter, which defaults to trust\_score\_desc. 
+  Now, users have the flexibility to use the optional `order` parameter, which defaults to trust_score_desc. 
 
   This addition allows users to customize the sorting order of tickers based on trust score, providing a more tailored experience for data retrieval.
+
+<GreenSeparator />
 
   ## Included new trust score field to tickers
 
   🗓️ **June 12, 2019**
 
-
-  We have added `trust_score` field to [/coins/\{id}/tickers](/reference/coins-id-tickers) and [/exchanges/\{id}/tickers](/reference/exchanges-id-tickers) endpoints
+  We have added `trust_score` field to [/coins/{id}/tickers](/reference/coins-id-tickers) and [/exchanges/{id}/tickers](/reference/exchanges-id-tickers) endpoints
 
   **Example of responses:**
 
-  [/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint
+  [/coins/{id}/tickers](/reference/coins-id-tickers) endpoint
 
   ```json JSON
   {
@@ -2728,7 +2681,7 @@ description: "Product updates and announcements"
   },
   ```
 
-  [/exchanges/\{id}/tickers ](/reference/exchanges-id-tickers) endpoint
+  [/exchanges/{id}/tickers ](/reference/exchanges-id-tickers) endpoint
 
   ```json JSON
   {
@@ -2749,22 +2702,23 @@ description: "Product updates and announcements"
   },
   ```
 
+<GreenSeparator />
+
   ## Included new fields
 
   🗓️ **June 10, 2019**
 
+  We have introduced two new fields, last_traded_at and last_fetched_at, to the ticker data. 
 
-  We have introduced two new fields, last\_traded\_at and last\_fetched\_at, to the ticker data. 
-
-  The existing timestamp field, which currently reflects the last\_traded\_at value, will be retained for compatibility. 
+  The existing timestamp field, which currently reflects the last_traded_at value, will be retained for compatibility. 
 
   However, please be advised that the timestamp field may be deprecated in the future. 
 
-  We recommend updating your application to make use of the newly added last\_traded\_at and last\_fetched\_at fields for improved accuracy and compatibility.
+  We recommend updating your application to make use of the newly added last_traded_at and last_fetched_at fields for improved accuracy and compatibility.
 
   **Example of responses**: 
 
-  [/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint
+  [/coins/{id}/tickers](/reference/coins-id-tickers) endpoint
 
   ```json JSON
   {
@@ -2785,7 +2739,7 @@ description: "Product updates and announcements"
   },
   ```
 
-  [/exchanges/\{id}/tickers ](/reference/exchanges-id-tickers)endpoint
+  [/exchanges/{id}/tickers ](/reference/exchanges-id-tickers)endpoint
 
   ```json JSON
   {
@@ -2814,10 +2768,9 @@ description: "Product updates and announcements"
 
   🗓️ **April 10, 2019**
 
+  Added `coin_ids` optional params to [/exchanges/{id}/tickers](/reference/exchanges-id-tickers) endpoint. Users can specify the `coin_ids` to get the exchanges tickers for a particular coin.
 
-  Added `coin_ids` optional params to [/exchanges/\{id}/tickers](/reference/exchanges-id-tickers) endpoint. Users can specify the `coin_ids` to get the exchanges tickers for a particular coin.
-
-  Added `exchange_ids` optional params to [/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint. Users can specify the `exchange_ids` to get the coin tickers on a particular exchange.
+  Added `exchange_ids` optional params to [/coins/{id}/tickers](/reference/coins-id-tickers) endpoint. Users can specify the `exchange_ids` to get the coin tickers on a particular exchange.
 
 </Update>
 
@@ -2826,15 +2779,15 @@ description: "Product updates and announcements"
 
   🗓️ **January 24, 2019**
 
-
   We have introduced a new endpoint: [/exchanges/list](/reference/exchanges-list). 
 
   This addition expands the functionality of our API, allowing users to retrieve a list of available exchanges on CoinGecko with id and name easily.
 
+<GreenSeparator />
+
   ## Set default params value for /coins/markets
 
   🗓️ **January 18, 2019**
-
 
   To minimize bandwidth usage, the [/coins/markets](/reference/coins-markets) endpoint will now automatically default to retrieving data for the top 100 coins by market cap when the 'ids' parameter is left blank. 
 
@@ -2849,17 +2802,17 @@ description: "Product updates and announcements"
 
   🗓️ **December 10, 2018**
 
-
   Recognizing the limitations of the paginated /coins feature, particularly its inability to query for specific coins, we have temporarily hidden it from the documentation to prevent confusion for new users. 
 
   Rest assured, there are no plans to remove or deprecate it in the near future. 
 
-  Instead, we encourage you to transition to the more versatile [/coins/list](/reference/coins-list) and [coins/\{id}](/reference/coins-id) options for a more tailored and efficient experience.
+  Instead, we encourage you to transition to the more versatile [/coins/list](/reference/coins-list) and [coins/{id}](/reference/coins-id) options for a more tailored and efficient experience.
+
+<GreenSeparator />
 
   ## Increased Requests Per Minute (RPM)
 
   🗓️ **December 07, 2018**
-
 
   Due the substantial volume of requests we've received, we are adjusting the API rate for Public API to **100 requests per minute**, allowing for **over 4 million requests per month**. 
 
@@ -2872,17 +2825,17 @@ description: "Product updates and announcements"
 
   🗓️ **November 30, 2018**
 
-
   In response to user feedback requesting reduced API payloads, we have introduced our [/simple](/reference/simple-price) endpoints, offering simplified responses. 
 
   Additional simple endpoints will be released soon to further enhance user experience.
+
+<GreenSeparator />
 
   ## Improved /exchanges/{id} endpoint
 
   🗓️ **November 13, 2018**
 
-
-  To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses for a specific exchange through the [/exchanges/\{id}](/reference/exchanges-id) endpoint. 
+  To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses for a specific exchange through the [/exchanges/{id}](/reference/exchanges-id) endpoint. 
 
   ```json
   {
@@ -2894,14 +2847,15 @@ description: "Product updates and announcements"
   }
   ```
 
-  To retrieve more tickers, kindly utilize [/exchanges/\{id}/tickers](/reference/exchanges-id-tickers) endpoint.
+  To retrieve more tickers, kindly utilize [/exchanges/{id}/tickers](/reference/exchanges-id-tickers) endpoint.
+
+<GreenSeparator />
 
   ## Improved /coins/{id} endpoint
 
   🗓️ **November 07, 2018**
 
-
-  To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses across multiple exchanges through the [/coins/\{id}](/reference/coins-id) endpoint. 
+  To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses across multiple exchanges through the [/coins/{id}](/reference/coins-id) endpoint. 
 
   ```json JSON
   {
@@ -2913,7 +2867,6 @@ description: "Product updates and announcements"
   }
   ```
 
-  To retrieve more tickers, kindly utilize [/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint.
+  To retrieve more tickers, kindly utilize [/coins/{id}/tickers](/reference/coins-id-tickers) endpoint.
 
 </Update>
-
