@@ -1,16 +1,16 @@
 # Included new fields
 
-We have introduced two new fields, last\_traded\_at and last\_fetched\_at, to the ticker data. 
+We have introduced two new fields, last_traded_at and last_fetched_at, to the ticker data. 
 
-The existing timestamp field, which currently reflects the last\_traded\_at value, will be retained for compatibility. 
+The existing timestamp field, which currently reflects the last_traded_at value, will be retained for compatibility. 
 
 However, please be advised that the timestamp field may be deprecated in the future. 
 
-We recommend updating your application to make use of the newly added last\_traded\_at and last\_fetched\_at fields for improved accuracy and compatibility.
+We recommend updating your application to make use of the newly added last_traded_at and last_fetched_at fields for improved accuracy and compatibility.
 
 **Example of responses**: 
 
-[/coins/\{id}/tickers](/reference/coins-id-tickers) endpoint
+[/coins/{id}/tickers](/reference/coins-id-tickers) endpoint
 
 ```json JSON
 {
@@ -31,7 +31,7 @@ We recommend updating your application to make use of the newly added last\_trad
 },
 ```
 
-[/exchanges/\{id}/tickers ](/reference/exchanges-id-tickers)endpoint
+[/exchanges/{id}/tickers ](/reference/exchanges-id-tickers)endpoint
 
 ```json JSON
 {

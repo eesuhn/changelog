@@ -1,6 +1,6 @@
 # New Endpoint & Improvements: On-Chain Trending Data, Enhanced Trending Search, and Improved Token Lookup
 
-## \[Pro-API Exclusive] New Endpoint  - On-chain Trending Search Data
+## [Pro-API Exclusive] New Endpoint  - On-chain Trending Search Data
 
 With this new endpoint [Trending Search Pools](https://docs.coingecko.com/reference/trending-search-pools), you can now retrieve the on-chain trending search pools and tokens data, as seen on GeckoTerminal.com .
 
@@ -12,7 +12,7 @@ Tips: you may flag `include=base_token` to retrieve the trending tokens data.
 
 Note:  this exclusive endpoint is available for our API [paid plan](https://www.coingecko.com/en/api/pricing) subscribers (Analyst plan & above).
 
-## \[Pro-API Exclusive] Improved Endpoint - Trending Search List
+## [Pro-API Exclusive] Improved Endpoint - Trending Search List
 
 [Paid plan](https://www.coingecko.com/en/api/pricing) subscribers (Analyst plan & above) can now use [Trending Search List](https://docs.coingecko.com/reference/trending-search) endpoint and flag `show_max` parameter to retrieve more trending coins, NFTs and coin categories on CoinGecko.com.
 
@@ -31,7 +31,7 @@ The following endpoints now support token lookup by symbol and name, in addition
 * [Coin Price by IDs and Symbols](https://docs.coingecko.com/reference/simple-price)
 * [Coins List with Market Data](https://docs.coingecko.com/reference/coins-markets)
 
-Previously, these endpoints only supported token lookup by [API IDs](\[https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins]\(https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins\)).  This enhancement streamlines token data retrieval and eliminates the need for manual coin ID mapping.
+Previously, these endpoints only supported token lookup by [API IDs]([https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins](https://docs.coingecko.com/docs/1-get-data-by-id-or-address#/methods-to-query-price--market-data-of-coins\)).  This enhancement streamlines token data retrieval and eliminates the need for manual coin ID mapping.
 
 Example Mapping:
 
@@ -52,59 +52,10 @@ The `include_tokens`parameter has been added to provide flexibility when filteri
 
 Example Request & Data:
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Request Example
-      </th>
-
-      <th>
-        Token Data Returned
-      </th>
-
-      <th>
-        Remarks
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        pro-api.coingecko.com/api/v3/coins/markets?vs\_currency=usd\&symbols=btc\&include\_tokens=top
-      </td>
-
-      <td>
-        1. Bitcoin
-      </td>
-
-      <td>
-        When symbols and 'include\_tokens=**top**' is specified, only the top market cap tokens will be returned.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        pro-api.coingecko.com/api/v3/coins/markets?vs\_currency=usd\&symbols=btc\&include\_tokens=all
-      </td>
-
-      <td>
-        1. Bitcoin
-        2. Osmosis allBTC
-        3. atcat
-        4. Meld Bridged BTC (Meld)
-        5. BlackrockTradingCurrency
-      </td>
-
-      <td>
-        When symbols and 'include\_tokens=**all**' is specified, all the coins that share the same symbol will be returned.
-
-        All the 5 coins stated in the example have the same symbol 'btc'.
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Request Example | Token Data Returned | Remarks |
+|:---|:---|:---|
+| pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&symbols=btc&include_tokens=top | 1. Bitcoin | When symbols and 'include_tokens=**top**' is specified, only the top market cap tokens will be returned. |
+| pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&symbols=btc&include_tokens=all | 1. Bitcoin<br/>2. Osmosis allBTC<br/>3. atcat<br/>4. Meld Bridged BTC (Meld)<br/>5. BlackrockTradingCurrency | When symbols and 'include_tokens=**all**' is specified, all the coins that share the same symbol will be returned.<br/><br/>All the 5 coins stated in the example have the same symbol 'btc'. |
 
 ## /coins/markets Endpoint Improvement
 

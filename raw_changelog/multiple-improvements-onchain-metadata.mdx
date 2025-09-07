@@ -50,12 +50,12 @@ Note: this new max address input limit is exclusive for paid plan subscribers (A
 
 ## Improved Data Consistency for Exchange Tickers by ID
 
-For [Exchange Tickers by ID](https://docs.coingecko.com/reference/exchanges-id-tickers) endpoint, the order is sorted by **trust\_score\_desc** by default. 
+For [Exchange Tickers by ID](https://docs.coingecko.com/reference/exchanges-id-tickers) endpoint, the order is sorted by **trust_score_desc** by default. 
 
 * Sometimes duplicate or missing data may occur due to paginated cached response, especially when a ticker's rank changes between 2 paginated requests, e.g. it might shift from Page 2 to Page 1, vice versa.   
-* We've added a new `order` option: **base\_target**, which will sort the tickers by **base** symbol, then **target** symbol, in lexicographical order, i.e. `0->9`, then `a->Z`.
+* We've added a new `order` option: **base_target**, which will sort the tickers by **base** symbol, then **target** symbol, in lexicographical order, i.e. `0->9`, then `a->Z`.
 
-Example:  flagging ?order=base\_target
+Example:  flagging ?order=base_target
 
 ```
 pro-api.coingecko.com/api/v3/exchanges/binance/tickers?order=base_target

@@ -1,10 +1,10 @@
 # Improved /coins/{id}/tickers
 
-Starting from April 14th, 2020, there's a crucial update to the[ /coins/\{id}/tickers](/reference/coins-id-tickers) API endpoint. Previously, the converted\_last value represented the converted price per coin in USD. Now, it will accurately reflect the market price of the base currency itself.
+Starting from April 14th, 2020, there's a crucial update to the[ /coins/{id}/tickers](/reference/coins-id-tickers) API endpoint. Previously, the converted_last value represented the converted price per coin in USD. Now, it will accurately reflect the market price of the base currency itself.
 
-For example, if querying coins/tether/tickers, and there's a BTC/USDT ticker pair, the old converted\_last might show 6491.51 USD. After the update, it will return 1, representing the actual market price of Tether.
+For example, if querying coins/tether/tickers, and there's a BTC/USDT ticker pair, the old converted_last might show 6491.51 USD. After the update, it will return 1, representing the actual market price of Tether.
 
-If you utilize converted\_last for calculations, be aware of potential breaking changes and take necessary actions. If it's solely for display, no action is required, as this update ensures a more accurate representation of the intended value.
+If you utilize converted_last for calculations, be aware of potential breaking changes and take necessary actions. If it's solely for display, no action is required, as this update ensures a more accurate representation of the intended value.
 
 **Example of responses:**
 
