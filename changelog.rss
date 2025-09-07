@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title><![CDATA[CoinGecko API Documentation]]></title>
+    <description><![CDATA[CoinGecko API Documentation: API references, tutorial guides, and more. 
+Get all the crypto market data you need: coins, NFTs, onchain DEX, live prices, metadata, historical data & more. Made for developers & traders.]]></description>
+    <link>https://docs.coingecko.com/</link>
+    <generator>RSS for Node</generator>
+    <lastBuildDate>Thu, 04 Sep 2025 14:24:56 GMT</lastBuildDate>
+    <atom:link href="https://docs.coingecko.com/changelog.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Now Supported: Launchpad Data (Pump.fun & More), Granular OHLCV, and Honeypot Info]]></title>
+      <description><![CDATA[We're excited to announce a major update to our on-chain API endpoints! This release introduces support for popular token launchpads, adds high-frequency OHLCV data, and enhances our honeypot detection capabilities to give you deeper and more timely on-chain insights.]]></description>
+      <link>https://docs.coingecko.com/changelog/launchpad-data-support-honeypot-improvement</link>
+      <guid isPermaLink="false">4228cc5c-4f22-3ace-9a47-68bcecc32486</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Tue, 05 Aug 2025 12:13:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Update Frequency Improvements for selected Pro-API endpoints (March 2025)]]></title>
+      <description><![CDATA[[Changes below are applicable to Analyst/Lite/Pro/Enterprise plan subscribers only.]]]></description>
+      <link>https://docs.coingecko.com/changelog/update-frequency-improvements-for-selected-pro-api-endpoints-march-2025</link>
+      <guid isPermaLink="false">811a9115-de7b-3c9d-a861-072ce6eb9a23</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 14 Mar 2025 08:39:17 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[New Megafilter Endpoint,  200+ Chains Supported: Hyperliquid, Abstract, Berachain & MOAR!]]></title>
+      <description><![CDATA[Powered by GeckoTerminal, the CoinGecko API now supports on-chain data across 200+ blockchain networks, including the latest additions: Hyperliquid, HyperEVM, Abstract, Berachain, Story, Monad, Unichain, and Soneium.]]></description>
+      <link>https://docs.coingecko.com/changelog/new-megafilter-endpoint</link>
+      <guid isPermaLink="false">a40fe491-d78e-33f2-a243-4f192f39a588</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Thu, 27 Feb 2025 03:49:00 GMT</pubDate>
+      <media:content url="https://files.readme.io/590a2f093c53b905144a1be995138aa48326a6145ddae5b77b59052ef2f5a606-megafilter.png"/>
+    </item>
+    <item>
+      <title><![CDATA[Improved Update Frequency for selected Pro-API On-chain Endpoints]]></title>
+      <description><![CDATA[[Changes below are applicable to all paid plan subscribers.]]]></description>
+      <link>https://docs.coingecko.com/changelog/improved-update-frequency-for-selected-pro-api-endpoints-aug-2025</link>
+      <guid isPermaLink="false">a72792cd-2dba-3b86-b9cf-db057d417931</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Mon, 18 Aug 2025 15:44:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[[Updated: Q4 2024] CoinGecko Asset Issuance Standardisation Initiative Updates]]></title>
+      <description><![CDATA[As part of our commitment to improving data quality and enhancing the consistency of asset information, we are rolling out an asset standardization initiative at CoinGecko.]]></description>
+      <link>https://docs.coingecko.com/changelog/coingecko-asset-issuance-standardisation-initiative-updates</link>
+      <guid isPermaLink="false">13782bda-524c-38d6-84f3-8708c7c1674f</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Tue, 17 Dec 2024 10:38:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Upcoming Change Notice: Removal of normalized_volume_btc Data]]></title>
+      <description><![CDATA[Notice: Upcoming Change to CoinGecko API Endpoints - Removal ofnormalized_volume_btc Data]]></description>
+      <link>https://docs.coingecko.com/changelog/upcoming-change-notice-removal-of-normalized_volume_btc-data</link>
+      <guid isPermaLink="false">d677784b-cfd0-3fc7-a39c-f72072cc2a4d</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 30 May 2025 14:06:21 GMT</pubDate>
+      <type>removed</type>
+    </item>
+    <item>
+      <title><![CDATA[Upcoming Change Notice: Removal of twitter_followers Data]]></title>
+      <description><![CDATA[Notice: Upcoming Change to CoinGecko API Endpoints - Removal oftwitter_followers Data]]></description>
+      <link>https://docs.coingecko.com/changelog/upcoming-change-notice-removal-of-twitter_followers-data</link>
+      <guid isPermaLink="false">8459c181-663b-327e-a432-6637763b2269</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 25 Apr 2025 04:40:00 GMT</pubDate>
+      <type>removed</type>
+    </item>
+    <item>
+      <title><![CDATA[Enhanced Onchain Metadata, Increased Max Address Limit for Multi Endpoints, Improved Exchange Tickers Sorting]]></title>
+      <description><![CDATA[Onchain Metadata: Improved Coverage]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvements-onchain-metadata</link>
+      <guid isPermaLink="false">41121dc1-a3a5-3455-95fb-d5d267beb81f</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Sun, 09 Feb 2025 04:06:45 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[SOL Currency Is Now Supported for CoinGecko Endpoints]]></title>
+      <description><![CDATA[We're excited to announce that you can now obtain real-time and historical price &amp; market data for tokens listed on CoinGecko.com, with the option to return data value in SOL (Solana) currency.]]></description>
+      <link>https://docs.coingecko.com/changelog/sol-currency-is-now-supported-for-coingecko-endpoints</link>
+      <guid isPermaLink="false">2ac7f5d7-6987-3663-87d2-f5ace3817cdb</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Thu, 19 Jun 2025 09:23:05 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Update Frequency Improvements for selected Pro-API endpoints]]></title>
+      <description><![CDATA[[Changes below are applicable to Analyst/Lite/Pro/Enterprise plan subscribers only.]]]></description>
+      <link>https://docs.coingecko.com/changelog/update-frequency-improvements-for-selected-pro-api-endpoints</link>
+      <guid isPermaLink="false">dbc78471-ff2d-33fb-a59d-4f7342c78292</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 14 Feb 2025 15:55:10 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /key endpoint]]></title>
+      <description><![CDATA[We've introduced a new endpoint /key for conveniently monitoring your account's API usage, including rate limits and remaining credits.]]></description>
+      <link>https://docs.coingecko.com/changelog/27032024</link>
+      <guid isPermaLink="false">6985da29-230a-3de6-99fc-088fcc8071a1</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 27 Mar 2024 09:34:34 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements (Onchain/GT)]]></title>
+      <description><![CDATA[image_url is now returned in the token response for pools and tokens endpoints:Example of responses:&lt;button type="button" value="json"&gt;JSON&lt;/button&gt; "data": { "id": "eth_0xdac17f958d2ee523a2206206994597c13d831ec7", "type": "token", "attributes": { "address": "0xdac17f958d2ee523a220620699...]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-28022024</link>
+      <guid isPermaLink="false">9bfc5003-f3d6-3ded-accd-b569d2701572</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 28 Feb 2024 03:52:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /networks/{network}/trending_pools endpoint (Onchain/GT)]]></title>
+      <description><![CDATA[Trending Pools endpoint, /networks/{network}/trending_pools is now available to fetch a list of pools that are trending as seen on GeckoTerminal based on web visits and on-chain activities.]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-24112023</link>
+      <guid isPermaLink="false">d20258ad-f1c1-3bc3-aada-4fdce28b0408</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 19 Feb 2024 04:16:25 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Deprecated response fields for /coins/{id}]]></title>
+      <description><![CDATA[The following data is now deprecated for /coins/{id} endpoint:]]></description>
+      <link>https://docs.coingecko.com/changelog/13122023</link>
+      <guid isPermaLink="false">45f4a873-7a1f-3524-8956-34c17023f3ce</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 13 Dec 2023 11:26:00 GMT</pubDate>
+      <type>deprecated</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements]]></title>
+      <description><![CDATA[The web_slug data is now available in the following endpoints.]]></description>
+      <link>https://docs.coingecko.com/changelog/21112023</link>
+      <guid isPermaLink="false">a4a3a2d9-26ba-3ca9-a98b-74cad968b5ae</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 21 Nov 2023 11:23:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements: Onchain Pools Page Limit, Trades Token Filter]]></title>
+      <description><![CDATA[Onchain Pools Data: Supports more than 10 pages of data]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvements-onchain-pools-onchain-trades</link>
+      <guid isPermaLink="false">228d1eda-60f8-3195-bbe6-dfd75a92e968</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Mon, 27 Jan 2025 10:23:43 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[New Endpoint & Improvements: On-Chain Trades, Net Buy Volume, and More]]></title>
+      <description><![CDATA[[Pro-API Exclusive] New Endpoint - On-chain Trades by Token Address]]></description>
+      <link>https://docs.coingecko.com/changelog/new-endpoint-improvements-on-chain-trades-net-buy-volume-and-more</link>
+      <guid isPermaLink="false">4d4b89fe-67cc-387a-9f59-64a7256c9c4f</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Thu, 29 May 2025 09:22:15 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Removal of Unsupported Categories]]></title>
+      <description><![CDATA[Upcoming Removal of Unsupported Categories from CoinGecko and CoinGecko API]]></description>
+      <link>https://docs.coingecko.com/changelog/update-removal-of-unsupported-categories</link>
+      <guid isPermaLink="false">ee032fe1-2637-37a3-87f3-4637a06e5ddf</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Thu, 23 Jan 2025 11:30:26 GMT</pubDate>
+      <type>removed</type>
+    </item>
+    <item>
+      <title><![CDATA[Improved Update Frequency for selected Pro-API endpoints]]></title>
+      <description><![CDATA[[Changes below are applicable to Analyst/Lite/Pro/Enterprise plan subscribers only.]]]></description>
+      <link>https://docs.coingecko.com/changelog/improved-update-frequency-for-selected-pro-api-endpoints</link>
+      <guid isPermaLink="false">18c35b9a-fba1-3853-826a-c616ad0e1680</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Mon, 13 Jan 2025 09:36:14 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvement: Holders data, Pool Stats, Simple Token Price]]></title>
+      <description><![CDATA[Onchain Token Info endpoints - Holders data]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvement-holder-count-pool-stats-simple-token-price</link>
+      <guid isPermaLink="false">cc5b28fa-1144-3942-a7e7-ef59d9449f85</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 14 Mar 2025 07:08:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /coins/{id}/ohlc/range endpoint]]></title>
+      <description><![CDATA[We've introduced a new endpoint /coins/{id}/ohlc/range.]]></description>
+      <link>https://docs.coingecko.com/changelog/11052024</link>
+      <guid isPermaLink="false">9c3eb0ba-2aec-30de-a940-e09db20573ae</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Fri, 10 May 2024 18:43:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /search/pools endpoint (Onchain/GT)]]></title>
+      <description><![CDATA[Added new endpoint to search for pools /search/pools based on keywords passed into query.]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-07092023</link>
+      <guid isPermaLink="false">97973417-baef-3d0a-ac73-802e448ea5de</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 19 Feb 2024 03:49:32 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields - NFT data]]></title>
+      <description><![CDATA[We've added 'user_favorites_count', and 'ath' (all-time-high) related data to the following NFT endpoints:]]></description>
+      <link>https://docs.coingecko.com/changelog/included-new-fields-nft-data</link>
+      <guid isPermaLink="false">188891a9-8e3d-3cb5-a8a6-bf268fdf976b</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Sun, 18 Aug 2024 03:54:47 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new field for /coins/{id} endpoint]]></title>
+      <description><![CDATA[We've included a new field "whitepaper" under "links" section for /coins/{id} endpoint]]></description>
+      <link>https://docs.coingecko.com/changelog/18012024</link>
+      <guid isPermaLink="false">d03f1f5f-2c8e-3357-9b66-37e27eb90824</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 18 Jan 2024 11:27:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included more trending coins]]></title>
+      <description><![CDATA[We've expanded the capabilities of the /search/trending endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/07122023</link>
+      <guid isPermaLink="false">dc288db6-7130-3203-a71f-794fb557b0ff</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 07 Dec 2023 11:24:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced historical circulating supply endpoint]]></title>
+      <description><![CDATA[We've introduced the Historical Circulating Supply endpoint exclusively for Enterprise plan subscribers.]]></description>
+      <link>https://docs.coingecko.com/changelog/21022022</link>
+      <guid isPermaLink="false">10801072-2b4e-3d06-bc43-6e6a00de47d8</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 21 Feb 2022 01:29:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Added interval hourly params to /coins/{id}/ohlc]]></title>
+      <description><![CDATA[We've expanded functionality to include support for the interval=hourly parameter within the /coins/{id}/ohlc endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/05052024</link>
+      <guid isPermaLink="false">cfd774d5-995c-3e71-aa13-77fe8bfecf65</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Sat, 04 May 2024 19:08:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Improvement of update frequency for OHLC endpoints]]></title>
+      <description><![CDATA[The cache &amp; update frequency of the following endpoints have been improved from every 30 minutes to every 15 minutes:]]></description>
+      <link>https://docs.coingecko.com/changelog/improvement-of-update-frequency-for-ohlc-endpoints</link>
+      <guid isPermaLink="false">137aab3f-2a85-3edd-8037-11eb3078c34a</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Wed, 04 Sep 2024 06:46:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Extended Historical Data for Onchain OHLCV Endpoint]]></title>
+      <description><![CDATA[What’s New?]]></description>
+      <link>https://docs.coingecko.com/changelog/extended-historical-data-for-onchain-ohlcv-endpoint</link>
+      <guid isPermaLink="false">58786339-41e4-31b3-a596-5726c4c1e1a2</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Wed, 15 Jan 2025 04:51:33 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Added support for inactive coins in /coins/list and historical data endpoints]]></title>
+      <description><![CDATA[We've now enhanced the /coins/list endpoint to include inactive coins]]></description>
+      <link>https://docs.coingecko.com/changelog/30042024</link>
+      <guid isPermaLink="false">ceb74d1f-2e50-39b0-9f32-d44a0bb42613</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 30 Apr 2024 04:33:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Improvement on pool data (Onchain/GT)]]></title>
+      <description><![CDATA[Pool data now returns transaction stats for the last 1 hour. Unique buyers and sellers in the last 1 hour and 24 hours are now returned in the response]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-03122023</link>
+      <guid isPermaLink="false">9272cce2-ba76-3078-805f-e533dd936ced</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Sun, 03 Dec 2023 04:20:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Enhancing Your Access to Even Fresher Data!]]></title>
+      <description><![CDATA[[Changes below are applicable to Analyst/Lite/Pro/Enterprise plan subscribers only.]]]></description>
+      <link>https://docs.coingecko.com/changelog/enhancing-your-access-to-even-fresher-data</link>
+      <guid isPermaLink="false">65744ec5-0197-39f7-9061-1b918dd6f76f</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Mon, 16 Dec 2024 03:22:36 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /coins/top_gainer_losers endpoint]]></title>
+      <description><![CDATA[We've added /coins/top_gainers_losers endpoint exclusively for Paid Plan Subscribers.]]></description>
+      <link>https://docs.coingecko.com/changelog/23032023</link>
+      <guid isPermaLink="false">d10b28d8-5e97-33e3-bf67-3cab7e0ff9b5</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 23 Mar 2023 11:02:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /coins/{id}/ohlc endpoint]]></title>
+      <description><![CDATA[We've introduced new /coins/{id}/ohlc endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/15072020</link>
+      <guid isPermaLink="false">145282d3-23ae-32b1-91b2-4f28b4f7cefc</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 15 Jul 2020 00:38:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced new endpoints (Onchain/GT)]]></title>
+      <description><![CDATA[Added new endpoints to allow querying multiple pools and tokens in a single API call. /networks/{network}/pools/multi/{addresses} and /networks/{network}/tokens/multi/{addresses}]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-06092023</link>
+      <guid isPermaLink="false">1ecc5922-1b9d-3fcd-9c1a-e1d51e7a94b7</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 06 Sep 2023 03:48:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields (Onchain/GT)]]></title>
+      <description><![CDATA[More data added to the Pool response such as FDV, market cap (from CoinGecko if available), price change percentage, volume, number of buy/sell transactionsMore data added when querying for token such as FDV, volume, market cap, and the top 3 pools]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-23062023</link>
+      <guid isPermaLink="false">8cdbfaea-f619-35a1-9a15-fc6207d4ab19</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Fri, 23 Jun 2023 03:36:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Increased Rate Limit (Onchain/GT)]]></title>
+      <description><![CDATA[We've increased the rate limit of Public Plan from 10 calls per minute to 30 calls per minute]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-19042023</link>
+      <guid isPermaLink="false">aaaf17a1-dcbd-34bc-bb82-9fcb12408a70</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 19 Apr 2023 02:45:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields]]></title>
+      <description><![CDATA[We've added "links" field (e.g. homepage, twitter, discord) to these NFT endpoints responses:]]></description>
+      <link>https://docs.coingecko.com/changelog/27032023</link>
+      <guid isPermaLink="false">7e793de6-f52d-338f-b9a7-3266771e2460</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 27 Mar 2023 11:06:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced new historical total supply endpoints]]></title>
+      <description><![CDATA[We've introduced Historical Total Supply data to Enterprise plan subscribers via these 2 exclusive endpoints:]]></description>
+      <link>https://docs.coingecko.com/changelog/12122023</link>
+      <guid isPermaLink="false">3ec5a1a5-533c-3e5b-9856-06702c083dd7</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 12 Dec 2023 11:25:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /networks/{network}/pools/{pool_address}/trades endpoint (Onchain/GT)]]></title>
+      <description><![CDATA[You can now get the latest 300 trades in the past 24 hours of a given pool from this endpoint /networks/{network}/pools/{pool_address}/trades. You may optionally filter by trade size as well. You can now build your own telegram bot alert!]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-08112023</link>
+      <guid isPermaLink="false">d56dbba0-3642-393d-b4ae-0a23cb84dadd</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 08 Nov 2023 04:09:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Update to Total Supply of POW Coins]]></title>
+      <description><![CDATA[What’s Changing?]]></description>
+      <link>https://docs.coingecko.com/changelog/update-to-total-supply-of-pow-coins</link>
+      <guid isPermaLink="false">dc9e1955-7b89-3591-ada4-a5688fefbba5</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Wed, 15 Jan 2025 04:23:56 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields (Onchain/GT)]]></title>
+      <description><![CDATA[Pool response data now returns price in the base and quote token of the pool base_token_price_quote_token and quote_token_price_base_token for your convenience without the need to do additional calculation to derive these values]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-11092023</link>
+      <guid isPermaLink="false">bec8c2cd-96cc-3b08-84e2-c6669f0cf6ab</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 11 Sep 2023 03:55:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced new endpoints and improvements]]></title>
+      <description><![CDATA[We've added new /global/market_cap_chart endpoint for Paid Plan Subscribers. This allows users to query historical market cap chart data.]]></description>
+      <link>https://docs.coingecko.com/changelog/25102022</link>
+      <guid isPermaLink="false">c287cfa3-0d97-3e4a-9494-09db4e6795c1</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 25 Oct 2022 10:54:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields to multiple endpoints]]></title>
+      <description><![CDATA[We have added a new field, "details_platform," to the /coins/{id} and /coins/{asset_platform_id}/contract/{contract_address} endpoints responses.]]></description>
+      <link>https://docs.coingecko.com/changelog/06092022</link>
+      <guid isPermaLink="false">9a93489c-a8e0-327e-8753-0bb23cc5fc31</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 06 Sep 2022 10:30:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /simple/networks/{network}/token_price/{addresses} endpoint (Onchain/GT)]]></title>
+      <description><![CDATA[Inspired by CoinGecko API most popular endpoint, we have launched the /simple/networks/{network}/token_price/{addresses}, simple endpoint. Simply pass in addresses of any tokens on supported blockchain and get price data for it]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-10112023</link>
+      <guid isPermaLink="false">13efd8a3-8b31-3d1b-81dc-0c3bf34a0d49</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Fri, 10 Nov 2023 04:13:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements: Onchain Trending Pools, CG New Currencies Support, Snapshot, Exchange Info]]></title>
+      <description><![CDATA[Onchain Trending Pools: Added Support to Filter by Duration]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvements-new-currencies-support</link>
+      <guid isPermaLink="false">09763509-135d-3cbd-87d5-2da676e99021</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Sun, 15 Dec 2024 21:09:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced new endpoints (Onchain/GT)]]></title>
+      <description><![CDATA[You can now fetch token information such as name, image, social links, and description via these endpoints:]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-23102023</link>
+      <guid isPermaLink="false">75c33085-c8ca-31be-b896-115df388f224</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 23 Oct 2023 04:07:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields to /exchanges/{id}]]></title>
+      <description><![CDATA[We've enhanced the /exchanges/{id} endpoint by adding two new fields, public_notice and alert_notice.]]></description>
+      <link>https://docs.coingecko.com/changelog/07092020</link>
+      <guid isPermaLink="false">260194c4-b0d1-3e1a-9392-251862c17e2d</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 07 Sep 2020 00:45:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[New Endpoint & Multiple Improvements: On-Chain Top Token Holder Address, Security Data, Historical Supply.]]></title>
+      <description><![CDATA[[Pro-API Exclusive] New Endpoint - Top Token Holder Address Data]]></description>
+      <link>https://docs.coingecko.com/changelog/onchain-token-top-holder-address</link>
+      <guid isPermaLink="false">6175f941-6685-3c27-a173-7851ca61c3bb</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 28 Mar 2025 08:36:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /search/trending endpoint]]></title>
+      <description><![CDATA[We've introduced new /search/trending endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/17082020</link>
+      <guid isPermaLink="false">b15b1fba-371a-3050-882f-72a07d159753</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 03 Aug 2020 00:42:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced category filter params to /coins/markets]]></title>
+      <description><![CDATA[We've implemented a category filter, currently limited to "decentralized_finance_defi," for the /coins/markets endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/03082020</link>
+      <guid isPermaLink="false">21fea9c3-6ebd-30b7-8cf4-62985921547e</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 03 Aug 2020 00:41:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /exchange/{id}/volume_chart/range endpoint]]></title>
+      <description><![CDATA[We've introduced the /exchange/{id}/volume_chart/range endpoint for Paid Plan Subscribers.]]></description>
+      <link>https://docs.coingecko.com/changelog/15022023</link>
+      <guid isPermaLink="false">7628e9e7-f07a-3b3b-9686-d3fa4afbc805</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 15 Feb 2023 10:58:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced new NFT endpoints]]></title>
+      <description><![CDATA[We've added exclusive NFTs beta endpoints for Paid Plan Subscribers. These endpoints include:]]></description>
+      <link>https://docs.coingecko.com/changelog/15122022</link>
+      <guid isPermaLink="false">57ee4c19-e64c-3ceb-aabe-ffdf4842b536</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 15 Dec 2022 10:55:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced NFTs and Token Lists Endpoints]]></title>
+      <description><![CDATA[We've introduced beta endpoints for NFTs:]]></description>
+      <link>https://docs.coingecko.com/changelog/29092022</link>
+      <guid isPermaLink="false">19755072-f6c0-31d6-89cd-52cc33cb924c</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 29 Sep 2022 10:33:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Improved 5-minutely data for Historical Chart Data endpoints]]></title>
+      <description><![CDATA[For the following 4 historical chart endpoints, the data of the last 48 hours from now is no longer excluded.]]></description>
+      <link>https://docs.coingecko.com/changelog/improved-5minutely-data-for-historical-chart-data-endpoints</link>
+      <guid isPermaLink="false">b9404889-c6d0-3d6d-b75b-846f7612488f</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Thu, 09 Jan 2025 10:41:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Set default params value for /coins/markets]]></title>
+      <description><![CDATA[To minimize bandwidth usage, the /coins/markets endpoint will now automatically default to retrieving data for the top 100 coins by market cap when the 'ids' parameter is left blank.]]></description>
+      <link>https://docs.coingecko.com/changelog/18012019</link>
+      <guid isPermaLink="false">ee7c11ef-f025-3728-b9cd-88e5d897dd44</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Fri, 18 Jan 2019 09:15:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements: Global Market Chart, Asset Platforms, Coin Categories, Historical Supply Chart]]></title>
+      <description><![CDATA[Global Market Chart - Improved Daily Data Update]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvements-26-sept-2024</link>
+      <guid isPermaLink="false">4b07b6a8-11e9-33e4-9cb3-39669ee5e3e8</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Thu, 26 Sep 2024 09:30:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements: Onchain Token Price, NFT Market Cap]]></title>
+      <description><![CDATA[Onchain Simple Token Price: Added Market Cap and 24h Volume Data]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvements-onchain-token-price-nft-market-cap</link>
+      <guid isPermaLink="false">c518ca28-4377-3665-9cbb-04f6d7e124c9</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 24 Jan 2025 09:22:16 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[New Endpoints & Improvements: Historical Token Holders Chart, OHLCV by Token Address, Multi-pool Token Data Support]]></title>
+      <description><![CDATA[[Pro-API Exclusive] New Endpoint - Historical Token Holders Chart by Token Address]]></description>
+      <link>https://docs.coingecko.com/changelog/new-endpoints-improvements-historical-token-holders-chart-ohlcv-by-token-address-multi-pool-token-data-support</link>
+      <guid isPermaLink="false">bfddbeeb-7797-3d2b-8615-781c77c1c7a2</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Mon, 09 Jun 2025 08:57:43 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Set default params value for tickers endpoints]]></title>
+      <description><![CDATA[We've implemented an enhancement to the /coins/{id}/tickers and /exchanges/{id}/tickers endpoints.]]></description>
+      <link>https://docs.coingecko.com/changelog/13062019</link>
+      <guid isPermaLink="false">4f7b1afd-2957-3876-9235-23d44c397414</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 13 Jun 2019 09:42:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced finance and derivatives endpoints]]></title>
+      <description><![CDATA[We have introduced finance and derivatives endpoints to our API.]]></description>
+      <link>https://docs.coingecko.com/changelog/08112019</link>
+      <guid isPermaLink="false">2e54a162-b2e3-3d9c-8770-e97834eb8741</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Fri, 08 Nov 2019 09:45:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Improved OHLCV endpoint (Onchain/GT)]]></title>
+      <description><![CDATA[/networks/{network}/pools/{pool_address}/ohlcv/{timeframe} now returns more granularity day, hour, minute and multiple aggregates]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-23032023</link>
+      <guid isPermaLink="false">c2b979db-8b73-3fe3-9b08-e9a6ae7748dd</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 23 Mar 2023 02:41:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements (Onchain/GT)]]></title>
+      <description><![CDATA[base_token_native_currency and quote_token_native_currency added to the pools endpoint response. This allows you to obtain price in the network's native currency in addition to in USDreserve_in_usd added to the pools endpoint response. This returns the total liquidity/reserve of the pool in USDpool_...]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-18042023</link>
+      <guid isPermaLink="false">26468733-e863-3c62-80e5-e85df5b2cb4d</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 18 Apr 2023 03:04:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements (Onchain/GT)]]></title>
+      <description><![CDATA[Token metadata such as name, symbol, and CoinGecko ID are now returned in the responses for pools endpoints. Users will need to pass in this attribute include=base_token, quote_tokenCoinGecko asset platform ID added to the response for /networks endpoint]]></description>
+      <link>https://docs.coingecko.com/changelog/gt-28052023</link>
+      <guid isPermaLink="false">e5e5bc5b-e2ca-3333-9e41-4414abc11b1b</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Sun, 28 May 2023 03:06:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced optional params for multiple endpoints]]></title>
+      <description><![CDATA[Added coin_ids optional params to /exchanges/{id}/tickers endpoint. Users can specify the coin_ids to get the exchanges tickers for a particular coin.]]></description>
+      <link>https://docs.coingecko.com/changelog/10042019</link>
+      <guid isPermaLink="false">8292a692-87f3-36cd-bcc5-514c7ecbb2dc</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 10 Apr 2019 09:22:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Added: Onchain Categories Data, CG data improvements]]></title>
+      <description><![CDATA[NEW: Onchain Categories : Get Categories on GeckoTerminal.com]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvements-onchain-categories-data</link>
+      <guid isPermaLink="false">d4a75c57-9e36-35f5-a928-87f241e25ac4</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Tue, 24 Dec 2024 10:13:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Added interval daily params to /coins/{id}/ohlc]]></title>
+      <description><![CDATA[The /coins/{id}/ohlc endpoint now supports the "interval=daily" parameter for Paid Plan Subscribers]]></description>
+      <link>https://docs.coingecko.com/changelog/22052023</link>
+      <guid isPermaLink="false">f8cba2c8-c9c6-3636-a802-b12eb1e245eb</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 22 May 2023 11:16:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /coins/list/new endpoint]]></title>
+      <description><![CDATA[We've introduced the /coins/list/new endpoint for Paid Plan Subscribers.]]></description>
+      <link>https://docs.coingecko.com/changelog/09012023</link>
+      <guid isPermaLink="false">9d4eb28f-7492-3f03-ad44-b438bf29acb0</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 09 Jan 2023 10:56:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Improved /coins/{id} endpoint]]></title>
+      <description><![CDATA[To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses across multiple exchanges through the /coins/{id} endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/07112018</link>
+      <guid isPermaLink="false">9512da96-d24f-37c9-971a-5d579f3fc946</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 07 Nov 2018 04:14:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /exchanges/{id}/volume_chart]]></title>
+      <description><![CDATA[We have added a new endpoint, /exchanges/{id}/volume_chart.]]></description>
+      <link>https://docs.coingecko.com/changelog/22072019</link>
+      <guid isPermaLink="false">89f0c922-0b47-308c-a5be-8e9555e591c2</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 22 Jul 2019 09:44:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements]]></title>
+      <description><![CDATA[We've made enhancements to the /search/trending and /coins/{asset_platform_id}/contract/{contract_address} endpoints:]]></description>
+      <link>https://docs.coingecko.com/changelog/01062023</link>
+      <guid isPermaLink="false">c3777b44-d6db-35cb-9bae-b71ebf14b30f</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 01 Jun 2023 11:18:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[New Endpoint & Improvements: On-Chain Trending Data, Enhanced Trending Search, and Improved Token Lookup]]></title>
+      <description><![CDATA[[Pro-API Exclusive] New Endpoint - On-chain Trending Search Data]]></description>
+      <link>https://docs.coingecko.com/changelog/new-endpoint-on-chain-trending-search-data</link>
+      <guid isPermaLink="false">5f42926a-12c4-30ac-ada9-d374c6f55ded</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Fri, 25 Apr 2025 05:05:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced precision params for other endpoints]]></title>
+      <description><![CDATA[The uses of 'precision' parameter allows to specify price data in full or 0-18 decimals, and previously was only made available for /simple/price and /simple/token_price/{id} endpoints.]]></description>
+      <link>https://docs.coingecko.com/changelog/15062023</link>
+      <guid isPermaLink="false">57a0b615-39f1-3323-b44c-e4b5cb3c524d</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 15 Jun 2023 11:20:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Deprecated event endpoint]]></title>
+      <description><![CDATA[Event endpoint deprecated]]></description>
+      <link>https://docs.coingecko.com/changelog/deprecate-event-endpoint</link>
+      <guid isPermaLink="false">313c5c85-7a0f-36b7-82c7-72db25cdef57</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 07 Sep 2020 01:24:00 GMT</pubDate>
+      <type>deprecated</type>
+    </item>
+    <item>
+      <title><![CDATA[Reduced the usage of /coins (paginated) endpoint]]></title>
+      <description><![CDATA[Recognizing the limitations of the paginated /coins feature, particularly its inability to query for specific coins, we have temporarily hidden it from the documentation to prevent confusion for new users.]]></description>
+      <link>https://docs.coingecko.com/changelog/10122018</link>
+      <guid isPermaLink="false">8c79cb13-3d9d-33a7-9952-65cd0f67a06e</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 10 Dec 2018 09:10:00 GMT</pubDate>
+      <type>deprecated</type>
+    </item>
+    <item>
+      <title><![CDATA[Improved /exchanges/{id} endpoint]]></title>
+      <description><![CDATA[To ensure the consistent uptime and scalability of this API, we can only provide a maximum of 100 tickers in the responses for a specific exchange through the /exchanges/{id} endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/13112018</link>
+      <guid isPermaLink="false">d38da2ef-6049-34cd-8e4d-6c4d975ac996</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 13 Nov 2018 08:43:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Increased Requests Per Minute (RPM)]]></title>
+      <description><![CDATA[Due the substantial volume of requests we've received, we are adjusting the API rate for Public API to 100 requests per minute, allowing for over 4 million requests per month.]]></description>
+      <link>https://docs.coingecko.com/changelog/07122018</link>
+      <guid isPermaLink="false">b3fe1a35-4232-3d66-9a52-4d36345d3039</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Fri, 07 Dec 2018 08:47:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields]]></title>
+      <description><![CDATA[We have introduced two new fields, last_traded_at and last_fetched_at, to the ticker data.]]></description>
+      <link>https://docs.coingecko.com/changelog/10062019</link>
+      <guid isPermaLink="false">616e9ecd-0d78-3ec0-b071-001e4bda9536</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 10 Jun 2019 09:29:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields to /coins/markets]]></title>
+      <description><![CDATA[We've introduced three new fields atl, atl_change_percentage, and atl_date to the responses of /coins/markets endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/23042020</link>
+      <guid isPermaLink="false">98af1c1d-70b7-3803-9fa9-5ee5080684bf</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 23 Apr 2020 00:35:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields]]></title>
+      <description><![CDATA[We've added 'watchlist_portfolio_users' field to /coins/{id} endpoint responses.]]></description>
+      <link>https://docs.coingecko.com/changelog/26042023</link>
+      <guid isPermaLink="false">01cac935-4d77-39ae-991a-3eea05cb2d73</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 26 Apr 2023 11:13:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Improved /coins/{id}/tickers]]></title>
+      <description><![CDATA[Starting from April 14th, 2020, there's a crucial update to the /coins/{id}/tickers API endpoint. Previously, the converted_last value represented the converted price per coin in USD. Now, it will accurately reflect the market price of the base currency itself.]]></description>
+      <link>https://docs.coingecko.com/changelog/31032020</link>
+      <guid isPermaLink="false">7ed835ba-dbaa-3c7b-83ca-187feed99cc4</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Tue, 31 Mar 2020 09:53:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /exchanges/list endpoint]]></title>
+      <description><![CDATA[We have introduced a new endpoint: /exchanges/list.]]></description>
+      <link>https://docs.coingecko.com/changelog/24012019</link>
+      <guid isPermaLink="false">cd1e31d1-f68d-314b-9132-5fa8956e47ec</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 24 Jan 2019 09:17:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new fields]]></title>
+      <description><![CDATA[We've added "symbol" field to these NFT endpoints responses:]]></description>
+      <link>https://docs.coingecko.com/changelog/03042023</link>
+      <guid isPermaLink="false">67525673-7daa-3e7b-9192-79ebd7fcee48</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Mon, 03 Apr 2023 11:11:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Included new trust score field to tickers]]></title>
+      <description><![CDATA[We have added trust_score field to /coins/{id}/tickers and /exchanges/{id}/tickers endpoints]]></description>
+      <link>https://docs.coingecko.com/changelog/12062019</link>
+      <guid isPermaLink="false">7a538d5e-2b1f-375d-887a-fd49748071ca</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Wed, 12 Jun 2019 09:38:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements]]></title>
+      <description><![CDATA[We've made some updates to the /coins/categories and /simple/token_price/{id} endpoints:]]></description>
+      <link>https://docs.coingecko.com/changelog/23022023</link>
+      <guid isPermaLink="false">b4eb57f8-a4f7-307e-bc94-37912f1c1732</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 23 Feb 2023 11:01:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Improvements: Onchain Simple Price, Onchain Recently Updated Info, NFT Collection Data]]></title>
+      <description><![CDATA[Onchain: Simple Price - Increased Token Address Limit from 30 to 100]]></description>
+      <link>https://docs.coingecko.com/changelog/multiple-improvements-onchain-endpoints-nft-banner-image</link>
+      <guid isPermaLink="false">0566f423-1fc3-363a-995e-de5e6031a890</guid>
+      <dc:creator><![CDATA[SA]]></dc:creator>
+      <pubDate>Wed, 09 Oct 2024 09:59:34 GMT</pubDate>
+      <type>improved</type>
+    </item>
+    <item>
+      <title><![CDATA[Introduced /simple endpoints]]></title>
+      <description><![CDATA[In response to user feedback requesting reduced API payloads, we have introduced our /simple endpoints, offering simplified responses.]]></description>
+      <link>https://docs.coingecko.com/changelog/30112018</link>
+      <guid isPermaLink="false">22ff7b9c-5e5c-36b8-9489-1a0ab7ba3d78</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Fri, 30 Nov 2018 08:46:00 GMT</pubDate>
+      <type>added</type>
+    </item>
+    <item>
+      <title><![CDATA[Updated params for /derivatives endpoint]]></title>
+      <description><![CDATA[We have made updates to the include_tickers parameter for /derivatives/exchanges/{id} endpoint.]]></description>
+      <link>https://docs.coingecko.com/changelog/09012020</link>
+      <guid isPermaLink="false">2df7696d-670b-369e-94e1-37a8400657d1</guid>
+      <dc:creator><![CDATA[haoxiang]]></dc:creator>
+      <pubDate>Thu, 09 Jan 2020 09:50:00 GMT</pubDate>
+      <type>improved</type>
+    </item>
+  </channel>
+</rss>
